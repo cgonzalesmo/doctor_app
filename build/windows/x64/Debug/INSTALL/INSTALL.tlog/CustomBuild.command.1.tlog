@@ -1,0 +1,10 @@
+^C:\USERS\ALPHA\ANDROIDSTUDIOPROJECTS\EZHEALTH_APP\BUILD\WINDOWS\CMAKEFILES\91C348CC655537DFDEE459EC74CB2B3F\INSTALL_FORCE.RULE
+setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
