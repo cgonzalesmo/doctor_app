@@ -131,8 +131,8 @@ class _UserRegistrationScreenState extends State<UserRegistrationScreen> {
   }
 
   sendUser(String userID) async {
-    // final String url = 'https://bcrecapc.ml/api/user/';
-    final String url = 'https://bcrecapc.ml/api/user/';
+    // final String url = 'https://web-production-4d85.up.railway.app/api/user/';
+    final String url = 'https://web-production-4d85.up.railway.app/api/user/';
     try {
       var response = await http.post(Uri.parse(url), body: {
         "registration_id": userID,

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
@@ -46,7 +45,8 @@ class _UpdateProfileState extends State<UpdateProfile> {
   }
 
   void updateData() async {
-    final String url = 'https://bcrecapc.ml/api/doctor/$doctorId/';
+    final String url =
+        'https://web-production-4d85.up.railway.app/api/doctor/$doctorId/';
 
     try {
       var response = await http.put(Uri.parse(url), body: {

@@ -58,7 +58,8 @@ class _UserHomeState extends State<UserHome> {
   }
 
   getUserDetails() async {
-    final String url = 'https://bcrecapc.ml/api/user/$userID/';
+    final String url =
+        'http://web-production-4d85.up.railway.app/api/user/$userID/';
     var response = await http.get(Uri.parse(url));
     if (!mounted) return;
     setState(() {
@@ -81,7 +82,8 @@ class _UserHomeState extends State<UserHome> {
   }
 
   getDoctors() async {
-    final String url = 'https://bcrecapc.ml/api/chamberdoctor/';
+    final String url =
+        'http://web-production-4d85.up.railway.app/api/chamberdoctor/';
     var response = await http.get(Uri.parse(url));
     if (!mounted) return;
     setState(() {

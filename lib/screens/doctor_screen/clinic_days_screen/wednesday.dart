@@ -45,7 +45,8 @@ class _WednesdayScreenState extends State<WednesdayScreen> {
   }
 
   void sendData() async {
-    final String url = 'https://bcrecapc.ml/api/wednesday/$doctorId/';
+    final String url =
+        'https://web-production-4d85.up.railway.app/api/wednesday/$doctorId/';
     var response = await http.put(Uri.parse(url), body: {
       "wednesday_id": doctorId,
       "chamber_location": clinicText,
@@ -71,7 +72,8 @@ class _WednesdayScreenState extends State<WednesdayScreen> {
   }
 
   getData() async {
-    final String url = 'https://bcrecapc.ml/api/wednesday/$doctorId/';
+    final String url =
+        'https://web-production-4d85.up.railway.app/api/wednesday/$doctorId/';
     var response = await http.get(Uri.parse(url));
     if (!mounted) return;
     setState(() {

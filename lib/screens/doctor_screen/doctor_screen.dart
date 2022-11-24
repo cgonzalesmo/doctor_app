@@ -59,7 +59,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
 
   getAppointmentDetails() async {
     final String url =
-        'https://bcrecapc.ml/api/appointmentdoctor/$userId/';
+        'https://web-production-4d85.up.railway.app/api/appointmentdoctor/$userId/';
     var response = await http.get(Uri.parse(url));
     if (!mounted) return;
     setState(() {
@@ -72,8 +72,9 @@ class _DoctorScreenState extends State<DoctorScreen> {
   }
 
   void getDoctor() async {
-    // final String url = 'https://bcrecapc.ml/api/doctor/$userId/';
-    final String url = 'https://bcrecapc.ml/api/doctor/$userId/';
+    // final String url = 'https://web-production-4d85.up.railway.app/api/doctor/$userId/';
+    final String url =
+        'https://web-production-4d85.up.railway.app/api/doctor/$userId/';
     var response = await http.get(Uri.parse(url));
     if (!mounted) return;
     setState(() {

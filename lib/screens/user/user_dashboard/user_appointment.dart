@@ -27,7 +27,8 @@ class _UserAppointmentState extends State<UserAppointment> {
   }
 
   getUserAppointment() async {
-    final String url = 'https://bcrecapc.ml/api/appointmentuser/$userId/';
+    final String url =
+        'https://web-production-4d85.up.railway.app/api/appointmentuser/$userId/';
     var response = await http.get(Uri.parse(url));
     if (!mounted) return;
     setState(() {

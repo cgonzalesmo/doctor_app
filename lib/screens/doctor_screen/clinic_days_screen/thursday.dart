@@ -39,7 +39,8 @@ class _ThursdayScreenState extends State<ThursdayScreen> {
   }
 
   void sendData() async {
-    final String url = 'https://bcrecapc.ml/api/thursday/$doctorId/';
+    final String url =
+        'https://web-production-4d85.up.railway.app/api/thursday/$doctorId/';
     var response = await http.put(Uri.parse(url), body: {
       "thursday_id": doctorId,
       "chamber_location": clinicText,

@@ -33,7 +33,8 @@ class _AllAvailableDoctorsState extends State<AllAvailableDoctors> {
   }
 
   getDoctorDetails() async {
-    final String url = 'https://bcrecapc.ml/api/chamberdoctor/';
+    final String url =
+        'https://web-production-4d85.up.railway.app/api/chamberdoctor/';
     var response = await http.get(Uri.parse(url));
     if (!mounted) return;
     setState(() {
@@ -44,9 +45,10 @@ class _AllAvailableDoctorsState extends State<AllAvailableDoctors> {
   }
 
   getUserDetails() async {
-    final String url = 'https://bcrecapc.ml/api/user/$userId/';
+    final String url =
+        'https://web-production-4d85.up.railway.app/api/user/$userId/';
     // final String url =
-    //     'https://bcrecapc.ml/api/user/I5pEXaj4EcM6PHj6xpbFRjOVo4u1/';
+    //     'https://web-production-4d85.up.railway.app/api/user/I5pEXaj4EcM6PHj6xpbFRjOVo4u1/';
     // final String url = 'http://142.93.212.221/api/user/$userID/';
     var response = await http.get(Uri.parse(url));
     if (!mounted) return;

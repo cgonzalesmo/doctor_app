@@ -51,8 +51,9 @@ class _DoctorProfileState extends State<DoctorProfile> {
   final _phone = TextEditingController();
 
   void updateItem() async {
-    // final String url = 'https://bcrecapc.ml/api/doctor/$doctorId';
-    final String url = 'https://bcrecapc.ml/api/doctor/$doctorId/';
+    // final String url = 'https://web-production-4d85.up.railway.app/api/doctor/$doctorId';
+    final String url =
+        'https://web-production-4d85.up.railway.app/api/doctor/$doctorId/';
     var response = await http.get(Uri.parse(url));
     if (!mounted) return;
     setState(() {
@@ -65,8 +66,9 @@ class _DoctorProfileState extends State<DoctorProfile> {
 
   void saveItem() async {
     isSave = true;
-    // final String url = 'https://bcrecapc.ml/api/doctor/$doctorId/';
-    final String url = 'https://bcrecapc.ml/api/doctor/$doctorId/';
+    // final String url = 'https://web-production-4d85.up.railway.app/api/doctor/$doctorId/';
+    final String url =
+        'https://web-production-4d85.up.railway.app/api/doctor/$doctorId/';
     try {
       var response = await http.put(Uri.parse(url), body: {
         "doctor_name": nameText,
