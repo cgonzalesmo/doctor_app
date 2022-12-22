@@ -1,9 +1,7 @@
 import 'dart:convert';
 import 'package:doctor_app/config/palette.dart';
-// import 'package:doctor_app/testScreens/user/doctor_section/time_slot.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-// import 'package:page_transition/page_transition.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
 
 class AppointmentBooking extends StatefulWidget {
@@ -205,7 +203,6 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
   getMonday() async {
     final String url =
         'https://doctor-api.up.railway.app/api/monday/$doctorId/';
-    // final String url = 'http://142.93.212.221/api/monday/$doctorId/';
     var response = await http.get(Uri.parse(url), headers: {
       'Content-Type': 'application/json;charset=UTF-8',
       'Charset': 'utf-8',
@@ -263,7 +260,6 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
   getThursday() async {
     final String url =
         'https://doctor-api.up.railway.app/api/thursday/$doctorId/';
-    // final String url = 'http://142.93.212.221/api/thursday/$doctorId/';
     var response = await http.get(Uri.parse(url), headers: {
       'Content-Type': 'application/json;charset=UTF-8',
       'Charset': 'utf-8',
@@ -282,7 +278,6 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
   getFriday() async {
     final String url =
         'https://doctor-api.up.railway.app/api/friday/$doctorId/';
-    // final String url = 'http://142.93.212.221/api/friday/$doctorId/';
     var response = await http.get(Uri.parse(url), headers: {
       'Content-Type': 'application/json;charset=UTF-8',
       'Charset': 'utf-8',
@@ -301,7 +296,6 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
   getSaturday() async {
     final String url =
         'https://doctor-api.up.railway.app/api/saturday/$doctorId/';
-    // final String url = 'http://142.93.212.221/api/saturday/$doctorId';
     var response = await http.get(Uri.parse(url), headers: {
       'Content-Type': 'application/json;charset=UTF-8',
       'Charset': 'utf-8',
@@ -320,7 +314,6 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
   getSunday() async {
     final String url =
         'https://doctor-api.up.railway.app/api/sunday/$doctorId/';
-    // final String url = 'http://142.93.212.221/api/sunday/$doctorId/';
     var response = await http.get(Uri.parse(url), headers: {
       'Content-Type': 'application/json;charset=UTF-8',
       'Charset': 'utf-8',
