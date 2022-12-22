@@ -187,7 +187,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   alignment: Alignment.centerLeft,
                   padding: EdgeInsets.only(left: 30),
                   child: Text(
-                    "Login",
+                    "Iniciar sesión",
                     style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                   ),
                 ),
@@ -206,7 +206,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20),
                             ),
-                            hintText: "Enter email id",
+                            hintText: "Introducir correo",
                           ),
                           keyboardType: TextInputType.emailAddress,
                           textInputAction: TextInputAction.next,
@@ -226,7 +226,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
                               ),
-                              hintText: "Enter password",
+                              hintText: "Introducir contraseña",
                               suffixIcon: IconButton(
                                   onPressed: () {
                                     setState(() {
@@ -264,7 +264,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                           FocusScope.of(context).unfocus();
                         },
-                        child: Text('Login'))
+                        child: Text('Iniciar sesión'))
                     : Center(
                         child: CircularProgressIndicator(),
                       ),
@@ -278,7 +278,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   String emailValidate(String email) {
     if (email.isEmpty) {
-      return 'Field must not be empty';
+      return 'El campo no debe estar vacío';
     } else {
       return null;
     }
@@ -286,7 +286,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   String passwordValidate(String password) {
     if (password.isEmpty) {
-      return 'Field must not be empty';
+      return 'El campo no debe estar vacío';
     } else {
       return null;
     }

@@ -8,8 +8,6 @@ import 'package:doctor_app/screens/doctor_screen/doctor_profile.dart';
 import 'package:doctor_app/screens/extra_screens/corona_stats.dart';
 import 'package:doctor_app/screens/extra_screens/news.dart';
 import 'package:doctor_app/screens/extra_screens/get_started.dart';
-import 'package:doctor_app/screens/extra_screens/privacy_policy.dart';
-import 'package:doctor_app/screens/extra_screens/terms_and_condition.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -84,8 +82,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
   }
 
   getDoctorQuotes() async {
-    final String url =
-        'https://samwitadhikary.github.io/doctor_quote/doctor_quote.json';
+    final String url = 'https://cgonzalesmo.github.io/frases.json';
     var response = await http.get(Uri.parse(url));
     if (!mounted) return;
     setState(() {
@@ -129,7 +126,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
           final difference = DateTime.now().difference(timeBackPressed);
           timeBackPressed = DateTime.now();
           if (difference >= Duration(seconds: 2)) {
-            final String msg = 'Press the back button to exit';
+            final String msg = 'Presione el boton atras para salir';
             ScaffoldMessenger.of(context)
                 .showSnackBar(SnackBar(content: Text(msg)));
             return false;
@@ -146,7 +143,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
                   height: MediaQuery.of(context).size.height * 0.1,
                 ),
                 ListTile(
-                  title: Text('Doctor Profile'),
+                  title: Text('Perfil de Doctor'),
                   leading: FaIcon(FontAwesomeIcons.pen),
                   onTap: () {
                     Navigator.push(
@@ -163,7 +160,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
                   },
                 ),
                 ListTile(
-                  title: Text('Clinics'),
+                  title: Text('Reservas'),
                   leading: FaIcon(FontAwesomeIcons.clinicMedical),
                   onTap: () {
                     Navigator.push(
@@ -173,31 +170,9 @@ class _DoctorScreenState extends State<DoctorScreen> {
                             child: ChamberScreen(userId)));
                   },
                 ),
-                ListTile(
-                  title: Text('Terms & Condition'),
-                  leading: Icon(Icons.note_alt_rounded),
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        PageTransition(
-                            child: TermsAndCondition(),
-                            type: PageTransitionType.rightToLeft));
-                  },
-                ),
-                ListTile(
-                  title: Text('Privacy Policy'),
-                  leading: Icon(Icons.lock),
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        PageTransition(
-                            child: PrivacyPolicy(),
-                            type: PageTransitionType.rightToLeft));
-                  },
-                ),
                 Divider(color: Colors.grey),
                 ListTile(
-                  title: Text('Logout'),
+                  title: Text('Cerrar sesión'),
                   leading: Icon(Icons.logout),
                   onTap: () async {
                     SharedPreferences prefs =
@@ -245,7 +220,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
                                         Container(
                                           alignment: Alignment.centerLeft,
                                           child: Text(
-                                            'Welcome',
+                                            'Bienvenido',
                                             style: TextStyle(
                                               fontSize: 22,
                                               fontWeight: FontWeight.bold,
@@ -310,7 +285,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
                                     },
                                     child: Showcase(
                                       key: _coronaKey,
-                                      description: 'Check covid-19 status',
+                                      description: 'Vea estado de covid-19',
                                       child: Container(
                                         height: 105,
                                         width: 105,
@@ -339,7 +314,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
                                             SizedBox(
                                               height: 10,
                                             ),
-                                            Text('Corona Stats')
+                                            Text('COVID-19')
                                           ],
                                         ),
                                       ),
@@ -363,7 +338,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
                                     child: Showcase(
                                       key: _newsKey,
                                       description:
-                                          'Read all trending medical and health news',
+                                          'Lea todas las noticias médicas y de salud de tendencia',
                                       child: Container(
                                         height: 105,
                                         width: 105,
@@ -392,7 +367,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
                                             SizedBox(
                                               height: 10,
                                             ),
-                                            Text('News')
+                                            Text('Noticias')
                                           ],
                                         ),
                                       ),
@@ -411,7 +386,8 @@ class _DoctorScreenState extends State<DoctorScreen> {
                                     },
                                     child: Showcase(
                                       key: _bmiKey,
-                                      description: 'Check body mass index',
+                                      description:
+                                          'Comprobar el índice de masa corporal',
                                       child: Container(
                                         height: 105,
                                         width: 105,
@@ -440,7 +416,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
                                             SizedBox(
                                               height: 10,
                                             ),
-                                            Text('BMI')
+                                            Text('IMC')
                                           ],
                                         ),
                                       ),
@@ -546,7 +522,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
                                       Showcase(
                                         key: _totalBooking,
                                         description:
-                                            'Total users booked till date',
+                                            'Total de usuarios reservados hasta la fecha',
                                         child: Container(
                                           height: 100,
                                           width: MediaQuery.of(context)
@@ -570,7 +546,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
                                                         .width *
                                                     0.5,
                                                 child: Text(
-                                                  'TOTAL BOOKINGS :',
+                                                  'RESERVAS TOTALES :',
                                                   style: TextStyle(
                                                     fontSize: 18,
                                                   ),
@@ -595,7 +571,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
                                       Showcase(
                                         key: _totalUniqueUser,
                                         description:
-                                            'Total unique users booked till date',
+                                            'Total de usuarios únicos reservados hasta la fecha',
                                         child: Container(
                                           height: 100,
                                           width: MediaQuery.of(context)
@@ -619,7 +595,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
                                                         .width *
                                                     0.5,
                                                 child: Text(
-                                                  'TOTAL UNIQUE USERS :',
+                                                  'USUARIOS ÚNICOS TOTALES:',
                                                   style: TextStyle(
                                                     fontSize: 18,
                                                   ),
@@ -651,7 +627,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
                       top: 30,
                       child: Showcase(
                         key: _optionsKey,
-                        description: 'Click here for more options',
+                        description: 'Haga clic aquí para más opciones',
                         child: IconButton(
                           onPressed: () => _scaffold.currentState.openDrawer(),
                           icon: Icon(

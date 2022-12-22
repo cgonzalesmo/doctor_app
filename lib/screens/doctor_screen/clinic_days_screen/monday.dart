@@ -119,7 +119,7 @@ class _MondayScreenState extends State<MondayScreen> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            "MONDAY",
+            "LUNES",
             style: TextStyle(color: Colors.black),
           ),
           elevation: 0,
@@ -146,7 +146,7 @@ class _MondayScreenState extends State<MondayScreen> {
                       chamberLocation == ""
                           ? TextFormField(
                               decoration: InputDecoration(
-                                label: Text("Clinic Location"),
+                                label: Text("Ubicación de la clínica"),
                                 alignLabelWithHint: true,
                                 border: OutlineInputBorder(),
                               ),
@@ -159,7 +159,7 @@ class _MondayScreenState extends State<MondayScreen> {
                             )
                           : TextFormField(
                               decoration: InputDecoration(
-                                label: Text("Clinic Location"),
+                                label: Text("Ubicación de la clínica"),
                                 alignLabelWithHint: true,
                                 border: OutlineInputBorder(),
                               ),
@@ -178,11 +178,12 @@ class _MondayScreenState extends State<MondayScreen> {
                       //! Slots Available
                       DropdownButtonFormField(
                         decoration: InputDecoration(
-                          label: Text("Choose Slots Available"),
+                          label: Text("Elija horario disponible"),
                           border: OutlineInputBorder(),
                         ),
-                        validator: (value) =>
-                            value == null ? 'Field must not be empty' : null,
+                        validator: (value) => value == null
+                            ? 'El campo no debe estar vacío'
+                            : null,
                         isExpanded: true,
                         value: _chosenValue,
                         items: [
@@ -219,7 +220,7 @@ class _MondayScreenState extends State<MondayScreen> {
                             // color: Colors.red,
                             child: TextFormField(
                               decoration: InputDecoration(
-                                label: Text("Available Time"),
+                                label: Text("Tiempo disponible"),
                                 alignLabelWithHint: true,
                                 border: OutlineInputBorder(),
                               ),
@@ -258,7 +259,7 @@ class _MondayScreenState extends State<MondayScreen> {
 
                   FocusScope.of(context).unfocus();
                 },
-                child: Text("Save"),
+                child: Text("Guardar"),
               ),
             ],
           ),
@@ -269,7 +270,7 @@ class _MondayScreenState extends State<MondayScreen> {
 
   String clinicValidate(String clinic) {
     if (clinic.isEmpty) {
-      return "Clinic must not be empty";
+      return "La clínica no debe estar vacía.";
     } else {
       return null;
     }

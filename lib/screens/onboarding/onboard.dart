@@ -26,7 +26,7 @@ class _OnBoardState extends State<OnBoard> {
 
     return SafeArea(
       child: OnBoardingSlider(
-        finishButtonText: 'Get Started',
+        finishButtonText: 'Empezar',
         onFinish: () {
           _storeOnboardInfo();
           Navigator.pushReplacement(
@@ -45,7 +45,7 @@ class _OnBoardState extends State<OnBoard> {
                   type: PageTransitionType.rightToLeft));
         },
         skipTextButton: Text(
-          'Skip',
+          'Saltar',
           style: TextStyle(
             fontSize: 16,
             color: kDarkBlueColor,
@@ -97,7 +97,7 @@ class _OnBoardState extends State<OnBoard> {
                   height: 480,
                 ),
                 Text(
-                  'Appointment Booking',
+                  'Reserva de cita',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: kDarkBlueColor,
@@ -109,7 +109,7 @@ class _OnBoardState extends State<OnBoard> {
                   height: 20,
                 ),
                 Text(
-                  'Book appointment at your fingertips...',
+                  'Reserva cita a tu alcance...',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       color: Colors.black26,
@@ -129,7 +129,7 @@ class _OnBoardState extends State<OnBoard> {
                   height: 480,
                 ),
                 Text(
-                  'COVID Stats',
+                  'Estadísticas de COVID-19',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: kDarkBlueColor,
@@ -141,7 +141,7 @@ class _OnBoardState extends State<OnBoard> {
                   height: 20,
                 ),
                 Text(
-                  'Get latest COVID Stats from verified source',
+                  'Obtenga las últimas estadísticas de COVID de una fuente verificada',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.black26,
@@ -162,7 +162,7 @@ class _OnBoardState extends State<OnBoard> {
                   height: 480,
                 ),
                 Text(
-                  'Health News',
+                  'Noticias de Salud',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: kDarkBlueColor,
@@ -174,7 +174,7 @@ class _OnBoardState extends State<OnBoard> {
                   height: 20,
                 ),
                 Text(
-                  'Get all latest health related news at your fingertips',
+                  'Obtenga todas las últimas noticias relacionadas con la salud al alcance de su mano',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.black26,
@@ -195,7 +195,7 @@ class _OnBoardState extends State<OnBoard> {
                   height: 480,
                 ),
                 Text(
-                  'Body Mass Index',
+                  'Índice de masa corporal',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: kDarkBlueColor,
@@ -207,7 +207,7 @@ class _OnBoardState extends State<OnBoard> {
                   height: 20,
                 ),
                 Text(
-                  'Check your BMI at a single click',
+                  'Consulta tu IMC con un solo clic',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.black26,
@@ -228,7 +228,7 @@ class _OnBoardState extends State<OnBoard> {
                   height: 480,
                 ),
                 Text(
-                  'Start Now!!',
+                  '¡¡Empezar ahora!!',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: kDarkBlueColor,
@@ -240,7 +240,7 @@ class _OnBoardState extends State<OnBoard> {
                   height: 20,
                 ),
                 Text(
-                  'Click below to get started',
+                  'Haga clic a continuación para comenzar',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.black26,

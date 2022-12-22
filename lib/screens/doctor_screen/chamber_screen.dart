@@ -35,7 +35,7 @@ class _ChamberScreenState extends State<ChamberScreen> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            "DAY WISE CLINIC",
+            "DIAS",
             style: TextStyle(color: Colors.black),
           ),
           elevation: 0,
@@ -71,7 +71,7 @@ class _ChamberScreenState extends State<ChamberScreen> {
                       Container(
                         // color: Colors.red,
                         child: Text(
-                          "Monday",
+                          "Lunes",
                           style: TextStyle(
                             fontSize: 18,
                           ),
@@ -136,7 +136,7 @@ class _ChamberScreenState extends State<ChamberScreen> {
                       Container(
                         // color: Colors.red,
                         child: Text(
-                          "Tuesday",
+                          "Martes",
                           style: TextStyle(
                             fontSize: 18,
                           ),
@@ -201,7 +201,7 @@ class _ChamberScreenState extends State<ChamberScreen> {
                       Container(
                         // color: Colors.red,
                         child: Text(
-                          "Wednesday",
+                          "Miercoles",
                           style: TextStyle(
                             fontSize: 18,
                           ),
@@ -266,7 +266,7 @@ class _ChamberScreenState extends State<ChamberScreen> {
                       Container(
                         // color: Colors.red,
                         child: Text(
-                          "Thursday",
+                          "Jueves",
                           style: TextStyle(
                             fontSize: 18,
                           ),
@@ -331,7 +331,7 @@ class _ChamberScreenState extends State<ChamberScreen> {
                       Container(
                         // color: Colors.red,
                         child: Text(
-                          "Friday",
+                          "Viernes",
                           style: TextStyle(
                             fontSize: 18,
                           ),
@@ -396,7 +396,7 @@ class _ChamberScreenState extends State<ChamberScreen> {
                       Container(
                         // color: Colors.red,
                         child: Text(
-                          "Saturday",
+                          "Sábado",
                           style: TextStyle(
                             fontSize: 18,
                           ),
@@ -461,7 +461,7 @@ class _ChamberScreenState extends State<ChamberScreen> {
                       Container(
                         // color: Colors.red,
                         child: Text(
-                          "Sunday",
+                          "Domingo",
                           style: TextStyle(
                             fontSize: 18,
                           ),

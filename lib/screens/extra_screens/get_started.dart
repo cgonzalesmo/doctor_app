@@ -58,7 +58,7 @@ class _GetStartedScreenState extends State<GetStartedScreen> {
                   width: MediaQuery.of(context).size.width,
                   padding: EdgeInsets.only(left: 40),
                   child: Text(
-                    "Get Started",
+                    "Empezar",
                     style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
@@ -72,7 +72,7 @@ class _GetStartedScreenState extends State<GetStartedScreen> {
                   width: MediaQuery.of(context).size.width,
                   padding: EdgeInsets.only(left: 40),
                   child: Text(
-                    "Sign up by choosing your role.",
+                    "Regístrate eligiendo tu rol.",
                     style: TextStyle(
                       fontSize: 16,
                     ),
@@ -117,7 +117,7 @@ class _GetStartedScreenState extends State<GetStartedScreen> {
                               width: MediaQuery.of(context).size.width * 0.65,
                               padding: EdgeInsets.only(left: 20, top: 10),
                               child: Text(
-                                "I'm a doctor",
+                                "Soy doctor",
                                 style: TextStyle(
                                     fontSize: 18, fontWeight: FontWeight.bold),
                               ),
@@ -172,7 +172,7 @@ class _GetStartedScreenState extends State<GetStartedScreen> {
                               width: MediaQuery.of(context).size.width * 0.65,
                               padding: EdgeInsets.only(left: 20, top: 10),
                               child: Text(
-                                "I'm a patient",
+                                "Soy paciente",
                                 style: TextStyle(
                                     fontSize: 18, fontWeight: FontWeight.bold),
                               ),

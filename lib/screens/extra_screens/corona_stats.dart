@@ -48,7 +48,7 @@ class _CoronaStatsState extends State<CoronaStats> {
       child: Scaffold(
           appBar: AppBar(
             title: Text(
-              "CORONA STATS",
+              "COVID-19",
               style: TextStyle(
                 color: Colors.black,
               ),
@@ -70,8 +70,8 @@ class _CoronaStatsState extends State<CoronaStats> {
                           height: 20,
                         ),
                         stats(
-                          "Total Cases",
-                          "Total Active",
+                          "Casos Totales",
+                          "Casos activos",
                           data['totalCases'].toString(),
                           "",
                           data['activeCases'].toString(),
@@ -82,8 +82,8 @@ class _CoronaStatsState extends State<CoronaStats> {
                           height: 10,
                         ),
                         stats(
-                          "Total Recovered",
-                          "Total Deaths",
+                          "Recuperados",
+                          "Fallecidos",
                           data['recovered'].toString(),
                           data['recoveredNew'].toString(),
                           data['deaths'].toString(),
@@ -115,7 +115,7 @@ class _CoronaStatsState extends State<CoronaStats> {
                                 width: MediaQuery.of(context).size.width * 0.5,
                                 // color: Colors.red,
                                 child: AutoSizeText(
-                                  "TOTAL SAMPLES TESTED",
+                                  "Muestras relizadas",
                                   // style: TextStyle(fontWeight: FontWeight.bold),
                                   maxLines: 2,
                                   minFontSize: 18,
@@ -145,7 +145,7 @@ class _CoronaStatsState extends State<CoronaStats> {
                                     // color: Colors.pink,
                                     child: GestureDetector(
                                       onTap: () {
-                                        print("Clicked on source");
+                                        print("Hizo clic en la fuente");
                                         _launchURL(
                                             'https://analytics.icmr.org.in/public/dashboard/149a9c89-de6d-4779-9326-5e8fed3323b6');
                                       },
@@ -153,7 +153,7 @@ class _CoronaStatsState extends State<CoronaStats> {
                                         mainAxisAlignment:
                                             MainAxisAlignment.end,
                                         children: [
-                                          Text("Source"),
+                                          Text("Fuente"),
                                           Icon(
                                             Icons.open_in_new,
                                             size: 15,
@@ -169,251 +169,6 @@ class _CoronaStatsState extends State<CoronaStats> {
                         ),
                         SizedBox(
                           height: 15,
-                        ),
-                        Container(
-                          // height: 700,
-                          width: MediaQuery.of(context).size.width * 0.93,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.grey[350],
-                                offset: Offset(3.0, 3.0),
-                                blurRadius: 5,
-                              ),
-                            ],
-                          ),
-                          child: Column(
-                            children: [
-                              Container(
-                                height: 50,
-                                width: MediaQuery.of(context).size.width,
-                                padding: EdgeInsets.only(left: 10, top: 20),
-                                // color: Colors.red,
-                                child: Text(
-                                  "STATE WISE DATA",
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                  ),
-                                ),
-                              ),
-                              Row(
-                                children: [
-                                  Container(
-                                    padding: EdgeInsets.only(left: 10),
-                                    width:
-                                        MediaQuery.of(context).size.width * 0.5,
-                                    child: AutoSizeText(
-                                      "COMPILED FROM STATE GOVT.\nNUMBERS AND VERIFIED SOURCES",
-                                      maxFontSize: 11,
-                                      minFontSize: 8,
-                                      maxLines: 2,
-                                    ),
-                                  ),
-                                  GestureDetector(
-                                    onTap: () {
-                                      _launchURL('https://www.mohfw.gov.in/');
-                                    },
-                                    child: Container(
-                                      padding: EdgeInsets.only(right: 10),
-                                      // color: Colors.red,
-                                      width: MediaQuery.of(context).size.width *
-                                          0.43,
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.end,
-                                        children: [
-                                          Icon(
-                                            Icons.info_outline,
-                                            size: 14,
-                                          ),
-                                          SizedBox(
-                                            width: 4,
-                                          ),
-                                          Text("Know More"),
-                                          SizedBox(
-                                            width: 4,
-                                          ),
-                                          FaIcon(
-                                            FontAwesomeIcons.arrowRight,
-                                            size: 11,
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                              SizedBox(
-                                height: 15,
-                              ),
-                              Container(
-                                height: 20,
-                                width: MediaQuery.of(context).size.width,
-                                padding: EdgeInsets.only(left: 10, right: 10),
-                                // color: Colors.red,
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Container(
-                                      // color: Colors.red,
-                                      child: AutoSizeText(
-                                        "State/UT",
-                                        maxFontSize: 10,
-                                        minFontSize: 7,
-                                      ),
-                                    ),
-                                    Container(
-                                      // color: Colors.red,
-                                      child: Center(
-                                        child: AutoSizeText(
-                                          "Confirm",
-                                          maxFontSize: 10,
-                                          minFontSize: 7,
-                                        ),
-                                      ),
-                                    ),
-                                    Container(
-                                      // color: Colors.red,
-                                      child: Center(
-                                        child: AutoSizeText(
-                                          "Active",
-                                          maxFontSize: 10,
-                                          minFontSize: 7,
-                                        ),
-                                      ),
-                                    ),
-                                    Container(
-                                      // color: Colors.red,
-                                      child: Center(
-                                        child: AutoSizeText(
-                                          "Recover",
-                                          maxFontSize: 10,
-                                          minFontSize: 7,
-                                        ),
-                                      ),
-                                    ),
-                                    Container(
-                                      // color: Colors.red,
-                                      child: Center(
-                                        child: AutoSizeText(
-                                          "Death",
-                                          maxFontSize: 10,
-                                          minFontSize: 7,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                padding: EdgeInsets.only(left: 10, right: 10),
-                                child: Divider(
-                                  thickness: 2,
-                                ),
-                              ),
-                              ListView.builder(
-                                physics: NeverScrollableScrollPhysics(),
-                                shrinkWrap: true,
-                                itemCount: state.length,
-                                itemBuilder: (BuildContext context, int index) {
-                                  final myState = state[index];
-                                  return Column(
-                                    children: [
-                                      Container(
-                                        // color: Colors.red,
-                                        height: 30,
-                                        child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Expanded(
-                                              flex: 2,
-
-                                              // margin: EdgeInsets.only(left: 10),
-                                              // width: 80,
-                                              // color: Colors.red,
-                                              child: Padding(
-                                                padding: const EdgeInsets.only(
-                                                    left: 8.0),
-                                                child: AutoSizeText(
-                                                  myState['region'],
-                                                  maxLines: 2,
-                                                  minFontSize: 7,
-                                                  maxFontSize: 9,
-                                                ),
-                                              ),
-                                            ),
-                                            Expanded(
-                                              flex: 2,
-                                              // width: 70,
-                                              // color: Colors.red,
-                                              child: Center(
-                                                child: Text(
-                                                  myState['totalInfected']
-                                                      .toString(),
-                                                  style:
-                                                      TextStyle(fontSize: 11.5),
-                                                ),
-                                              ),
-                                            ),
-                                            Expanded(
-                                              flex: 2,
-                                              // width: 70,
-                                              // color: Colors.red,
-                                              child: Center(
-                                                child: Text(
-                                                  myState['activeCases']
-                                                      .toString(),
-                                                  style:
-                                                      TextStyle(fontSize: 11.5),
-                                                ),
-                                              ),
-                                            ),
-                                            Expanded(
-                                              flex: 2,
-                                              // width: 70,
-                                              // color: Colors.red,
-                                              child: Center(
-                                                child: Text(
-                                                  myState['recovered']
-                                                      .toString(),
-                                                  style: TextStyle(
-                                                    fontSize: 11.5,
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                            Expanded(
-                                                flex: 2,
-                                                // width: 70,
-                                                // color: Colors.red,
-                                                child: Center(
-                                                  child: Text(
-                                                    myState['deceased']
-                                                        .toString(),
-                                                    style: TextStyle(
-                                                        fontSize: 11.5),
-                                                  ),
-                                                )),
-                                          ],
-                                        ),
-                                      ),
-                                      Container(
-                                        padding: EdgeInsets.only(
-                                            left: 10, right: 10),
-                                        child: Divider(
-                                          thickness: 2,
-                                        ),
-                                      )
-                                    ],
-                                  );
-                                },
-                              )
-                            ],
-                          ),
                         ),
                         SizedBox(
                           height: 30,

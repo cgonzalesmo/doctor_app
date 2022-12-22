@@ -77,7 +77,7 @@ class _UserRegistrationScreenState extends State<UserRegistrationScreen> {
               onPressed: () {
                 Navigator.pop(context);
               },
-              child: Text('Close'),
+              child: Text('Cerrar'),
             )
           ],
         ),
@@ -91,41 +91,41 @@ class _UserRegistrationScreenState extends State<UserRegistrationScreen> {
       case "account-exists-with-different-credential":
       case "email-already-in-use":
         isLogin = false;
-        return "Email already used. Go to login page.";
+        return "Correo electronico ya fue usado. Ir a la página de inicio de sesión.";
         break;
       case "ERROR_WRONG_PASSWORD":
       case "wrong-password":
         isLogin = false;
-        return "Wrong email/password combination.";
+        return "Combinación incorrecta de correo electrónico/contraseña.";
         break;
       case "ERROR_USER_NOT_FOUND":
       case "user-not-found":
         isLogin = false;
-        return "No user found with this email.";
+        return "Ningún usuario encontrado con este correo electrónico.";
         break;
       case "ERROR_USER_DISABLED":
       case "user-disabled":
         isLogin = false;
-        return "User disabled.";
+        return "Usuario deshabilitado.";
         break;
       case "ERROR_TOO_MANY_REQUESTS":
       case "operation-not-allowed":
         isLogin = false;
-        return "Too many requests to log into this account.";
+        return "Demasiadas solicitudes para iniciar sesión en esta cuenta.";
         break;
       case "ERROR_OPERATION_NOT_ALLOWED":
       case "operation-not-allowed":
         isLogin = false;
-        return "Server error, please try again later.";
+        return "Error del servidor, inténtalo de nuevo más tarde.";
         break;
       case "ERROR_INVALID_EMAIL":
       case "invalid-email":
         isLogin = false;
-        return "Email address is invalid.";
+        return "Dirección de correo electrónico es inválida.";
         break;
       default:
         isLogin = false;
-        return "Login failed. Please try again.";
+        return "Error de inicio de sesion. Inténtalo de nuevo.";
         break;
     }
   }
@@ -186,7 +186,7 @@ class _UserRegistrationScreenState extends State<UserRegistrationScreen> {
                   padding: EdgeInsets.only(left: 20),
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    "User Registration Form",
+                    "Formulario para Usuario",
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
@@ -208,7 +208,7 @@ class _UserRegistrationScreenState extends State<UserRegistrationScreen> {
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20),
                             ),
-                            label: Text("Name*"),
+                            label: Text("Nombre*"),
                             alignLabelWithHint: true,
                           ),
                           textInputAction: TextInputAction.next,
@@ -226,13 +226,14 @@ class _UserRegistrationScreenState extends State<UserRegistrationScreen> {
                         //! Gender
                         DropdownButtonFormField(
                           decoration: InputDecoration(
-                            label: Text("Choose Gender*"),
+                            label: Text("Elija género*"),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20),
                             ),
                           ),
-                          validator: (value) =>
-                              value == null ? 'Field must not be empty' : null,
+                          validator: (value) => value == null
+                              ? 'El campo no debe estar vacío'
+                              : null,
                           isExpanded: true,
                           value: _chosenValue,
                           items: [
@@ -260,7 +261,7 @@ class _UserRegistrationScreenState extends State<UserRegistrationScreen> {
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20),
                             ),
-                            label: Text('Email*'),
+                            label: Text('Correo*'),
                             alignLabelWithHint: true,
                           ),
                           textInputAction: TextInputAction.next,
@@ -281,7 +282,7 @@ class _UserRegistrationScreenState extends State<UserRegistrationScreen> {
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20),
                             ),
-                            label: Text("Phone Number*"),
+                            label: Text("Número de teléfono*"),
                             alignLabelWithHint: true,
                           ),
                           keyboardType: TextInputType.number,
@@ -305,7 +306,7 @@ class _UserRegistrationScreenState extends State<UserRegistrationScreen> {
                                       border: OutlineInputBorder(
                                         borderRadius: BorderRadius.circular(20),
                                       ),
-                                      label: Text("Password*"),
+                                      label: Text("Contraseña*"),
                                       alignLabelWithHint: true,
                                       suffixIcon: IconButton(
                                           onPressed: () {
@@ -330,7 +331,7 @@ class _UserRegistrationScreenState extends State<UserRegistrationScreen> {
                               Spacer(),
                               Tooltip(
                                 message:
-                                    '\n\u2022 Include both lowercase and uppercase characters\n\u2022 Include atleast one number\n\u2022 Include atleast one special character\n\u2022 Be more than 6 characters long\n',
+                                    '\n\u2022 Incluir caracteres en minúsculas y mayúsculas\n\u2022 Incluya al menos un número\n\u2022 Incluir al menos un carácter especial\n\u2022 Tener más de 6 caracteres\n',
                                 triggerMode: TooltipTriggerMode.tap,
                                 showDuration: Duration(seconds: 5),
                                 preferBelow: false,
@@ -352,7 +353,7 @@ class _UserRegistrationScreenState extends State<UserRegistrationScreen> {
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
                               ),
-                              label: Text("Confirm Password*"),
+                              label: Text("Confirmar contraseña*"),
                               alignLabelWithHint: true,
                               suffixIcon: IconButton(
                                   onPressed: () {
@@ -396,7 +397,7 @@ class _UserRegistrationScreenState extends State<UserRegistrationScreen> {
                             FocusScope.of(context).unfocus();
                           }
                         },
-                        child: Text('Register'),
+                        child: Text('Registrar'),
                       )
                     : Center(
                         child: CircularProgressIndicator(),
@@ -414,7 +415,7 @@ class _UserRegistrationScreenState extends State<UserRegistrationScreen> {
 
   String nameValidate(String name) {
     if (name.isEmpty) {
-      return 'Field must not be empty';
+      return 'El campo no debe estar vacío';
     } else {
       return null;
     }
@@ -425,9 +426,9 @@ class _UserRegistrationScreenState extends State<UserRegistrationScreen> {
     final regEx = RegExp(pattern);
 
     if (email.isEmpty) {
-      return 'Field must not be empty';
+      return 'El campo no debe estar vacío';
     } else if (!regEx.hasMatch(email)) {
-      return 'Enter a valid email';
+      return 'Introduzca un correo válido';
     } else {
       return null;
     }
@@ -435,9 +436,9 @@ class _UserRegistrationScreenState extends State<UserRegistrationScreen> {
 
   String phoneValidate(String phone) {
     if (phone.isEmpty) {
-      return 'Field must not be empty';
-    } else if (phone.length < 10 || phone.length > 10) {
-      return 'Phone number should contain 10 digits';
+      return 'El campo no debe estar vacío';
+    } else if (phone.length < 9 || phone.length > 9) {
+      return 'El número de teléfono debe contener 9 dígitos';
     } else {
       return null;
     }
@@ -449,9 +450,9 @@ class _UserRegistrationScreenState extends State<UserRegistrationScreen> {
     final regEx = RegExp(pattern);
 
     if (password.isEmpty) {
-      return 'Field must not be empty';
+      return 'El campo no debe estar vacío';
     } else if (!regEx.hasMatch(password)) {
-      return "Choose a strong password";
+      return "Elija una contraseña segura";
     } else {
       return null;
     }
@@ -459,9 +460,9 @@ class _UserRegistrationScreenState extends State<UserRegistrationScreen> {
 
   String confirmPasswordValidate(String confirmPassword) {
     if (confirmPassword.isEmpty) {
-      return 'Field must not be empty';
+      return 'El campo no debe estar vacío';
     } else if (confirmPassword != _password.text) {
-      return "Password didn't match";
+      return "La contraseña no coincide";
     } else {
       return null;
     }

@@ -41,7 +41,7 @@ class _NewsState extends State<News> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            "HEALTH NEWS",
+            "Noticias de Salud",
             style: TextStyle(
               color: Colors.black,
             ),

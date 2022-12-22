@@ -32,7 +32,7 @@ class _InputPageState extends State<InputPage> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            'BMI CALCULATOR',
+            'Calculadora IMC',
             style: TextStyle(color: Colors.black),
           ),
           elevation: 0,
@@ -58,7 +58,7 @@ class _InputPageState extends State<InputPage> {
                           : Colors.white,
                       cardChild: IconContent(
                         icon: FontAwesomeIcons.mars,
-                        label: 'MALE',
+                        label: 'Masculino',
                       ),
                     ),
                   ),
@@ -74,7 +74,7 @@ class _InputPageState extends State<InputPage> {
                           : Colors.white,
                       cardChild: IconContent(
                         icon: FontAwesomeIcons.venus,
-                        label: 'FEMALE',
+                        label: 'Femenino',
                       ),
                     ),
                   )
@@ -88,7 +88,7 @@ class _InputPageState extends State<InputPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'HEIGHT',
+                      'Estatura',
                       style: kLabelTextStyle,
                     ),
                     Row(
@@ -142,7 +142,7 @@ class _InputPageState extends State<InputPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'WEIGHT',
+                            'Peso',
                             style: kLabelTextStyle,
                           ),
                           Text(
@@ -184,7 +184,7 @@ class _InputPageState extends State<InputPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'AGE',
+                            'Edad',
                             style: kLabelTextStyle,
                           ),
                           Text(
@@ -223,7 +223,7 @@ class _InputPageState extends State<InputPage> {
               ),
             ),
             BottomButton(
-              buttonTitle: 'CALCULATE',
+              buttonTitle: 'Calcular',
               onTap: () {
                 CalculatorBrain calc =
                     CalculatorBrain(height: height, weight: weight);

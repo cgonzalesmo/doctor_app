@@ -10,7 +10,7 @@ class PrivacyPolicy extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            'PRIVACY POLICY',
+            'POLÍTICA DE PRIVACIDAD',
             style: TextStyle(color: Colors.black),
           ),
           centerTitle: true,

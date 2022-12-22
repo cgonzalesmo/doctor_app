@@ -17,7 +17,7 @@ class Offline extends StatelessWidget {
                 'assets/animations/offline.json',
               ),
               Text(
-                'No Internet',
+                'No hay conexion',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -30,7 +30,7 @@ class Offline extends StatelessWidget {
                 onPressed: () {
                   RestartWidget.restartApp(context);
                 },
-                child: Text('Restart App'),
+                child: Text('Reiniciar App'),
               ),
             ],
           ),

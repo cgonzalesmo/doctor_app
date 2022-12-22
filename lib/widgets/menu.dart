@@ -39,7 +39,7 @@ class MenuItem extends StatelessWidget {
         ),
         ListTile(
           title: Text(
-            "Logout",
+            "Cerrar sesión",
             style: TextStyle(fontSize: 18),
           ),
           leading: Icon(Icons.logout),

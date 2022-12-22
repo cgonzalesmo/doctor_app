@@ -20,7 +20,7 @@ class ResultsPage extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            'BMI CALCULATOR',
+            'Calculadora IMC',
             style: TextStyle(
               color: Colors.black,
             ),
@@ -39,7 +39,7 @@ class ResultsPage extends StatelessWidget {
                 padding: EdgeInsets.all(15),
                 alignment: Alignment.bottomCenter,
                 child: Text(
-                  'Your Result',
+                  'Tu resultado',
                   style: kTitleTextStyle,
                 ),
               ),
@@ -70,7 +70,7 @@ class ResultsPage extends StatelessWidget {
               ),
             ),
             BottomButton(
-              buttonTitle: 'RE-CALCULATE',
+              buttonTitle: 'RE-CALCULAR',
               onTap: () {
                 Navigator.pop(context);
               },

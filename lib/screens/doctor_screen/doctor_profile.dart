@@ -80,13 +80,13 @@ class _DoctorProfileState extends State<DoctorProfile> {
 
       if (response.statusCode == 200) {
         ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text("Profile Updated Successfully")));
+            SnackBar(content: Text("Perfil actualizado con éxito")));
         setState(() {
           isSave = false;
         });
       } else {
         ScaffoldMessenger.of(context)
-            .showSnackBar(SnackBar(content: Text("Something Went Wrong")));
+            .showSnackBar(SnackBar(content: Text("Algo salió mal")));
         setState(() {
           isSave = false;
         });
@@ -108,7 +108,7 @@ class _DoctorProfileState extends State<DoctorProfile> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            "DOCTOR PROFILE",
+            "Perfil",
             style: TextStyle(
               color: Colors.black,
             ),
@@ -156,7 +156,7 @@ class _DoctorProfileState extends State<DoctorProfile> {
                               //! Name
                               TextFormField(
                                 decoration: InputDecoration(
-                                  label: Text("Name"),
+                                  label: Text("Nombre"),
                                   border: OutlineInputBorder(),
                                   alignLabelWithHint: true,
                                 ),
@@ -217,7 +217,7 @@ class _DoctorProfileState extends State<DoctorProfile> {
                               myDoctor['degree'] == ''
                                   ? TextFormField(
                                       decoration: InputDecoration(
-                                        label: Text("Degree"),
+                                        label: Text("Grado"),
                                         alignLabelWithHint: true,
                                         border: OutlineInputBorder(),
                                       ),
@@ -231,7 +231,7 @@ class _DoctorProfileState extends State<DoctorProfile> {
                                     )
                                   : TextFormField(
                                       decoration: InputDecoration(
-                                        label: Text("Degree"),
+                                        label: Text("Grado"),
                                         alignLabelWithHint: true,
                                         border: OutlineInputBorder(),
                                       ),
@@ -252,7 +252,7 @@ class _DoctorProfileState extends State<DoctorProfile> {
                               myDoctor['designation'] == ''
                                   ? TextFormField(
                                       decoration: InputDecoration(
-                                        label: Text("Designation"),
+                                        label: Text("Especialidad"),
                                         alignLabelWithHint: true,
                                         border: OutlineInputBorder(),
                                       ),
@@ -266,7 +266,7 @@ class _DoctorProfileState extends State<DoctorProfile> {
                                     )
                                   : TextFormField(
                                       decoration: InputDecoration(
-                                        label: Text("Designation"),
+                                        label: Text("Especialidad"),
                                         alignLabelWithHint: true,
                                         border: OutlineInputBorder(),
                                       ),
@@ -286,7 +286,7 @@ class _DoctorProfileState extends State<DoctorProfile> {
                               //! Phone
                               TextFormField(
                                 decoration: InputDecoration(
-                                  label: Text("Phone"),
+                                  label: Text("Telefono"),
                                   alignLabelWithHint: true,
                                   border: OutlineInputBorder(),
                                 ),
@@ -325,7 +325,7 @@ class _DoctorProfileState extends State<DoctorProfile> {
 
                                 FocusScope.of(context).unfocus();
                               },
-                              child: Text("Save"),
+                              child: Text("Guardar"),
                             )
                           : CircularProgressIndicator()
                     ],
@@ -341,7 +341,7 @@ class _DoctorProfileState extends State<DoctorProfile> {
 
   String nameValidate(String name) {
     if (name.isEmpty) {
-      return "Name must not be empty";
+      return "El nombre no debe estar vacío";
     } else {
       return null;
     }
@@ -349,7 +349,7 @@ class _DoctorProfileState extends State<DoctorProfile> {
 
   String descriptionValidate(String description) {
     if (description.isEmpty) {
-      return "Field must not be empty";
+      return "El campo no debe estar vacío";
     } else {
       return null;
     }
@@ -357,7 +357,7 @@ class _DoctorProfileState extends State<DoctorProfile> {
 
   String degreeValidate(String degree) {
     if (degree.isEmpty) {
-      return "Degree must not be empty";
+      return "El grado no debe estar vacío";
     } else {
       return null;
     }
@@ -365,7 +365,7 @@ class _DoctorProfileState extends State<DoctorProfile> {
 
   String designationValidate(String designation) {
     if (designation.isEmpty) {
-      return "Designation must not be empty";
+      return "La especialidad no debe estar vacía";
     } else {
       return null;
     }
@@ -373,9 +373,9 @@ class _DoctorProfileState extends State<DoctorProfile> {
 
   String phoneValidate(String phone) {
     if (phone.isEmpty) {
-      return "Phone must not be empty";
-    } else if (phone.length < 10 || phone.length > 10) {
-      return "Enter valid phone number";
+      return "El teléfono no debe estar vacío";
+    } else if (phone.length < 9 || phone.length > 9) {
+      return "Introduce un número de teléfono válido";
     } else {
       return null;
     }

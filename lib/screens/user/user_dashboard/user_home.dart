@@ -6,8 +6,6 @@ import 'package:doctor_app/config/palette.dart';
 import 'package:doctor_app/screens/bmi_screen/screens/input_page.dart';
 import 'package:doctor_app/screens/extra_screens/corona_stats.dart';
 import 'package:doctor_app/screens/extra_screens/news.dart';
-import 'package:doctor_app/screens/extra_screens/privacy_policy.dart';
-import 'package:doctor_app/screens/extra_screens/terms_and_condition.dart';
 import 'package:doctor_app/screens/extra_screens/get_started.dart';
 import 'package:doctor_app/screens/user/doctor_section/about_doctor.dart';
 import 'package:doctor_app/screens/user/doctor_section/all_available_doctors.dart';
@@ -70,8 +68,7 @@ class _UserHomeState extends State<UserHome> {
   }
 
   getDoctorQuotes() async {
-    final String url =
-        'https://samwitadhikary.github.io/doctor_quote/doctor_quote.json';
+    final String url = 'https://cgonzalesmo.github.io/frases.json';
     var response = await http.get(Uri.parse(url));
     if (!mounted) return;
     setState(() {
@@ -124,7 +121,7 @@ class _UserHomeState extends State<UserHome> {
           final difference = DateTime.now().difference(timeBackPressed);
           timeBackPressed = DateTime.now();
           if (difference >= Duration(seconds: 2)) {
-            final String msg = 'Press the back button to exit';
+            final String msg = 'Pulse el botón atrás para salir';
             ScaffoldMessenger.of(context)
                 .showSnackBar(SnackBar(content: Text(msg)));
             return false;
@@ -142,7 +139,7 @@ class _UserHomeState extends State<UserHome> {
                 ),
                 ListTile(
                   title: Text(
-                    'User Profile',
+                    'Perfil de usuario',
                     style: TextStyle(
                       fontSize: 15,
                     ),
@@ -158,7 +155,7 @@ class _UserHomeState extends State<UserHome> {
                 ),
                 ListTile(
                   title: Text(
-                    'Your Appointments',
+                    'Tus citas',
                     style: TextStyle(
                       fontSize: 15,
                     ),
@@ -174,37 +171,9 @@ class _UserHomeState extends State<UserHome> {
                             type: PageTransitionType.rightToLeftWithFade));
                   },
                 ),
-                ListTile(
-                  title: Text('Terms & Conditions',
-                      style: TextStyle(fontSize: 15)),
-                  leading: Icon(Icons.note_alt_outlined),
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        PageTransition(
-                            child: TermsAndCondition(),
-                            type: PageTransitionType.rightToLeft));
-                  },
-                ),
-                ListTile(
-                  title: Text(
-                    'Privacy Policy',
-                    style: TextStyle(
-                      fontSize: 15,
-                    ),
-                  ),
-                  leading: Icon(Icons.lock),
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        PageTransition(
-                            child: PrivacyPolicy(),
-                            type: PageTransitionType.rightToLeft));
-                  },
-                ),
                 Divider(color: Colors.grey),
                 ListTile(
-                  title: Text('LogOut'),
+                  title: Text('Cerrar sesión'),
                   leading: Icon(Icons.logout),
                   onTap: () async {
                     SharedPreferences prefs =
@@ -251,7 +220,7 @@ class _UserHomeState extends State<UserHome> {
                                         Container(
                                           alignment: Alignment.centerLeft,
                                           child: Text(
-                                            'Welcome',
+                                            'Bienvenido',
                                             style: TextStyle(
                                               fontSize: 22,
                                               fontWeight: FontWeight.bold,
@@ -308,7 +277,8 @@ class _UserHomeState extends State<UserHome> {
                                     },
                                     child: Showcase(
                                       key: _coronaKey,
-                                      description: 'Check covid-19 status',
+                                      description:
+                                          'Verifique estado de COVID-19',
                                       child: Container(
                                         height: 105,
                                         width: 105,
@@ -337,7 +307,7 @@ class _UserHomeState extends State<UserHome> {
                                             SizedBox(
                                               height: 10,
                                             ),
-                                            Text('Corona Stats')
+                                            Text('COVID-19')
                                           ],
                                         ),
                                       ),
@@ -357,7 +327,7 @@ class _UserHomeState extends State<UserHome> {
                                     child: Showcase(
                                       key: _newsKey,
                                       description:
-                                          'Read all trending medical and health news',
+                                          'Lea todas las noticias médicas y de salud de tendencia',
                                       child: Container(
                                         height: 105,
                                         width: 105,
@@ -386,7 +356,7 @@ class _UserHomeState extends State<UserHome> {
                                             SizedBox(
                                               height: 10,
                                             ),
-                                            Text('News')
+                                            Text('Noticias')
                                           ],
                                         ),
                                       ),
@@ -405,7 +375,8 @@ class _UserHomeState extends State<UserHome> {
                                     },
                                     child: Showcase(
                                       key: _bmiKey,
-                                      description: 'Check your Body Mass Index',
+                                      description:
+                                          'Consulta tu Índice de Masa Corporal',
                                       child: Container(
                                         height: 105,
                                         width: 105,
@@ -434,7 +405,7 @@ class _UserHomeState extends State<UserHome> {
                                             SizedBox(
                                               height: 10,
                                             ),
-                                            Text('BMI')
+                                            Text('IMC')
                                           ],
                                         ),
                                       ),
@@ -519,7 +490,7 @@ class _UserHomeState extends State<UserHome> {
                                 children: [
                                   Container(
                                     child: Text(
-                                      'Available Doctors',
+                                      'Doctores disponibles',
                                       style: TextStyle(
                                         fontSize: 20,
                                       ),
@@ -541,9 +512,9 @@ class _UserHomeState extends State<UserHome> {
                                       child: Showcase(
                                         key: _seeAllDoctorKey,
                                         description:
-                                            'See all available doctors',
+                                            'Ver todos las doctores disponibles',
                                         child: Text(
-                                          'See All >',
+                                          'Ver todos >',
                                           style: TextStyle(fontSize: 18),
                                         ),
                                       ),
@@ -671,7 +642,7 @@ class _UserHomeState extends State<UserHome> {
                       top: 30,
                       child: Showcase(
                         key: _menuKey,
-                        description: 'Click here for more options',
+                        description: 'Haga clic aquí para más opciones',
                         child: IconButton(
                           icon: Icon(Icons.menu),
                           onPressed: () =>
