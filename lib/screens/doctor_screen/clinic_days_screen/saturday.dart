@@ -57,10 +57,10 @@ class _SaturdayScreenState extends State<SaturdayScreen> {
     if (response.statusCode == 200) {
       print(response.body);
       ScaffoldMessenger.of(context)
-          .showSnackBar(SnackBar(content: Text("Saturday Clinic Uploaded")));
+          .showSnackBar(SnackBar(content: Text("Sábado Clínica cargado")));
     } else {
       ScaffoldMessenger.of(context)
-          .showSnackBar(SnackBar(content: Text("Something Went Wrong")));
+          .showSnackBar(SnackBar(content: Text("Algo salió mal")));
     }
   }
 
@@ -175,7 +175,7 @@ class _SaturdayScreenState extends State<SaturdayScreen> {
                       //! Slots Available
                       DropdownButtonFormField(
                         decoration: InputDecoration(
-                          label: Text("Elija horario disponible"),
+                          label: Text("Elija cantidad de pacientes"),
                           border: OutlineInputBorder(),
                         ),
                         validator: (value) => value == null

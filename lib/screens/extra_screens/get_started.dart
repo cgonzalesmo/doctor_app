@@ -45,7 +45,7 @@ class _GetStartedScreenState extends State<GetStartedScreen> {
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        "Login",
+                        "Iniciar sesión",
                         style: TextStyle(fontSize: 17),
                       ),
                     ),

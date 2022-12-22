@@ -62,7 +62,7 @@ class _AllAvailableDoctorsState extends State<AllAvailableDoctors> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            'All Available Doctors',
+            'Doctores Disponibles',
             style: TextStyle(color: Colors.black),
           ),
           centerTitle: true,

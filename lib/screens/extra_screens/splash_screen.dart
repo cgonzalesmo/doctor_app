@@ -109,17 +109,6 @@ class _SplashScreenState extends State<SplashScreen> {
                   ),
                 ),
                 // color: Colors.red,
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Container(
-                    child: Text('Version: 1.0.0'),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  )
-                ],
               )
             ],
           ),

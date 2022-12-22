@@ -507,7 +507,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
                               padding: EdgeInsets.only(left: 30),
                               width: MediaQuery.of(context).size.width,
                               child: Text(
-                                'Analytics :',
+                                'Informe :',
                                 style: TextStyle(
                                   fontSize: 17,
                                 ),
@@ -522,7 +522,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
                                       Showcase(
                                         key: _totalBooking,
                                         description:
-                                            'Total de usuarios reservados hasta la fecha',
+                                            'Total de pacientes reservados hasta la fecha',
                                         child: Container(
                                           height: 100,
                                           width: MediaQuery.of(context)
@@ -571,7 +571,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
                                       Showcase(
                                         key: _totalUniqueUser,
                                         description:
-                                            'Total de usuarios únicos reservados hasta la fecha',
+                                            'Total de pacientes únicos reservados hasta la fecha',
                                         child: Container(
                                           height: 100,
                                           width: MediaQuery.of(context)
@@ -595,7 +595,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
                                                         .width *
                                                     0.5,
                                                 child: Text(
-                                                  'USUARIOS ÚNICOS TOTALES:',
+                                                  'PACIENTES ÚNICOS TOTALES:',
                                                   style: TextStyle(
                                                     fontSize: 18,
                                                   ),

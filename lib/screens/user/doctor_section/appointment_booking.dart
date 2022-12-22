@@ -106,7 +106,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
   void initState() {
     super.initState();
 
-    print("+91" + "$userPhone");
+    print("+51" + "$userPhone");
 
     _razorpay = new Razorpay();
 
@@ -463,9 +463,9 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
       showDialog(
         context: (context),
         builder: (_) => AlertDialog(
-          title: Text('Success'),
+          title: Text('Éxito'),
           content: Text(
-              'You have successfully booked the appointment at $time on $day at $place under Dr. $doctorName($doctorDesignation).'),
+              'Ha reservado con éxito la cita a las $time el dia $day en $place con el Dr. $doctorName($doctorDesignation).'),
           actions: [
             ElevatedButton(
               onPressed: () {
@@ -494,7 +494,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
 
                 Navigator.pop(context);
               },
-              child: Text('Close'),
+              child: Text('Cerrar'),
             ),
           ],
         ),
@@ -509,7 +509,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
       // sendWhatsapp();
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Something Went Wrong. Try Again!!!')));
+          SnackBar(content: Text('Algo salió mal. ¡Intentar otra vez!')));
     }
   }
 
@@ -517,14 +517,14 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
     showDialog(
       context: context,
       builder: (_) => AlertDialog(
-        title: Text('Unsuccessfull'),
-        content: Text("Sorry!!!\nYour appointment could'nt be booked"),
+        title: Text('Fracasado'),
+        content: Text("¡Lo sentimos!\No se pudo reservar su cita"),
         actions: [
           ElevatedButton(
             onPressed: () {
               Navigator.pop(context);
             },
-            child: Text('Close'),
+            child: Text('Cerrar'),
           ),
         ],
       ),
@@ -535,14 +535,14 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
     showDialog(
       context: context,
       builder: (_) => AlertDialog(
-        title: Text('Proceed'),
-        content: Text('Proceed to pay booking charges?'),
+        title: Text('Proceder'),
+        content: Text('¿Proceder a pagar los gastos de reserva?'),
         actions: [
           ElevatedButton(
             onPressed: () {
               Navigator.pop(context);
             },
-            child: Text('Cancel'),
+            child: Text('Cancelar'),
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.all(Colors.red),
             ),
@@ -552,7 +552,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
               paymentAndBook();
               Navigator.pop(context);
             },
-            child: Text('Proceed'),
+            child: Text('Proceder'),
           ),
         ],
       ),
@@ -599,7 +599,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            'Available Clinics',
+            'Clínicas Disponibles',
             style: TextStyle(
               color: Colors.black,
             ),
@@ -700,7 +700,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
                                                               .center,
                                                       children: [
                                                         Text(
-                                                          "MON |",
+                                                          "LUN |",
                                                           style: TextStyle(
                                                             fontSize: 20,
                                                           ),
@@ -744,7 +744,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
                                                                   .center,
                                                           children: [
                                                             Text(
-                                                              'Slot Available',
+                                                              'Cupo Disponible',
                                                               style: TextStyle(
                                                                 fontSize: 15,
                                                               ),
@@ -826,7 +826,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
                                                               .center,
                                                       children: [
                                                         Text(
-                                                          "TUE |",
+                                                          "MAR |",
                                                           style: TextStyle(
                                                             fontSize: 20,
                                                           ),
@@ -870,7 +870,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
                                                                   .center,
                                                           children: [
                                                             Text(
-                                                              'Slot Available',
+                                                              'Cupo Disponible',
                                                               style: TextStyle(
                                                                 fontSize: 15,
                                                               ),
@@ -951,7 +951,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
                                                               .center,
                                                       children: [
                                                         Text(
-                                                          "WED |",
+                                                          "MIE |",
                                                           style: TextStyle(
                                                             fontSize: 20,
                                                           ),
@@ -995,7 +995,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
                                                                   .center,
                                                           children: [
                                                             Text(
-                                                              'Slot Available',
+                                                              'Cupo Disponible',
                                                               style: TextStyle(
                                                                 fontSize: 15,
                                                               ),
@@ -1077,7 +1077,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
                                                               .center,
                                                       children: [
                                                         Text(
-                                                          "THU |",
+                                                          "JUE |",
                                                           style: TextStyle(
                                                             fontSize: 20,
                                                           ),
@@ -1121,7 +1121,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
                                                                   .center,
                                                           children: [
                                                             Text(
-                                                              'Slot Available',
+                                                              'Cupo Disponible',
                                                               style: TextStyle(
                                                                 fontSize: 15,
                                                               ),
@@ -1201,7 +1201,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
                                                               .center,
                                                       children: [
                                                         Text(
-                                                          "FRI |",
+                                                          "VIE |",
                                                           style: TextStyle(
                                                             fontSize: 20,
                                                           ),
@@ -1245,7 +1245,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
                                                                   .center,
                                                           children: [
                                                             Text(
-                                                              'Slot Available',
+                                                              'Cupo Disponible',
                                                               style: TextStyle(
                                                                 fontSize: 15,
                                                               ),
@@ -1327,7 +1327,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
                                                               .center,
                                                       children: [
                                                         Text(
-                                                          "SAT |",
+                                                          "SAB |",
                                                           style: TextStyle(
                                                             fontSize: 20,
                                                           ),
@@ -1371,7 +1371,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
                                                                   .center,
                                                           children: [
                                                             Text(
-                                                              'Slot Available',
+                                                              'Cupo Disponible',
                                                               style: TextStyle(
                                                                 fontSize: 15,
                                                               ),
@@ -1451,7 +1451,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
                                                               .center,
                                                       children: [
                                                         Text(
-                                                          "SUN |",
+                                                          "DOM |",
                                                           style: TextStyle(
                                                             fontSize: 20,
                                                           ),
@@ -1495,7 +1495,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
                                                                   .center,
                                                           children: [
                                                             Text(
-                                                              'Slot Available',
+                                                              'Cupo Disponible',
                                                               style: TextStyle(
                                                                 fontSize: 15,
                                                               ),
@@ -1539,7 +1539,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
                                       confirmToPay();
                                     }
                                   : null,
-                              child: Text('Book'),
+                              child: Text('Reservar'),
                             ),
                           ),
                         ],
@@ -1549,7 +1549,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
                       ),
               )
             : Center(
-                child: Text("No Clinics Available"),
+                child: Text("No hay clínicas disponibles"),
               ),
       ),
     );

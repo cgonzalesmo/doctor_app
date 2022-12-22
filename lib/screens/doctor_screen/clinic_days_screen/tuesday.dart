@@ -58,7 +58,7 @@ class _TuesdayScreenState extends State<TuesdayScreen> {
     if (response.statusCode == 200) {
       print(response.body);
       ScaffoldMessenger.of(context)
-          .showSnackBar(SnackBar(content: Text("Martes Clínica Subida")));
+          .showSnackBar(SnackBar(content: Text("Martes Clínica cargado")));
     } else {
       ScaffoldMessenger.of(context)
           .showSnackBar(SnackBar(content: Text("Algo salió mal")));
@@ -148,7 +148,7 @@ class _TuesdayScreenState extends State<TuesdayScreen> {
                       //! Slots Available
                       DropdownButtonFormField(
                         decoration: InputDecoration(
-                          label: Text("Elija horario disponible"),
+                          label: Text("Elija cantidad de pacientes"),
                           border: OutlineInputBorder(),
                         ),
                         validator: (value) => value == null

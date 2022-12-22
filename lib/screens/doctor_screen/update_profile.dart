@@ -60,7 +60,7 @@ class _UpdateProfileState extends State<UpdateProfile> {
       if (response.statusCode == 200) {
         print('success');
         ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text("Profile Updated Successfully")));
+            SnackBar(content: Text("Perfil actualizado con éxito")));
       }
     } catch (e) {
       print(e);
@@ -93,7 +93,7 @@ class _UpdateProfileState extends State<UpdateProfile> {
                         // color: Colors.red,
                         child: Center(
                           child: Text(
-                            "Update Profile",
+                            "Actualizar perfil",
                             style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
@@ -108,7 +108,7 @@ class _UpdateProfileState extends State<UpdateProfile> {
                       TextFormField(
                         // initialValue: doctorName,
                         decoration: InputDecoration(
-                          label: Text("Name"),
+                          label: Text("Nombre"),
                           alignLabelWithHint: true,
                           // hintText: doctorName,
                           border: OutlineInputBorder(),
@@ -126,7 +126,7 @@ class _UpdateProfileState extends State<UpdateProfile> {
                       //! Degree
                       TextFormField(
                         decoration: InputDecoration(
-                          label: Text("Degree"),
+                          label: Text("Grado"),
                           alignLabelWithHint: true,
                           border: OutlineInputBorder(),
                         ),
@@ -143,7 +143,7 @@ class _UpdateProfileState extends State<UpdateProfile> {
                       //! Designation
                       TextFormField(
                         decoration: InputDecoration(
-                          label: Text("Designation"),
+                          label: Text("Especialidad"),
                           alignLabelWithHint: true,
                           border: OutlineInputBorder(),
                         ),
@@ -160,7 +160,7 @@ class _UpdateProfileState extends State<UpdateProfile> {
                       //!Phone
                       TextFormField(
                         decoration: InputDecoration(
-                          label: Text("Phone"),
+                          label: Text("Teléfono"),
                           alignLabelWithHint: true,
                           border: OutlineInputBorder(),
                         ),
@@ -198,7 +198,7 @@ class _UpdateProfileState extends State<UpdateProfile> {
 
                               FocusScope.of(context).unfocus();
                             },
-                            child: Text("Save"),
+                            child: Text("Guardar"),
                           ),
                           SizedBox(
                             width: 10,
@@ -208,7 +208,7 @@ class _UpdateProfileState extends State<UpdateProfile> {
                               clearForm();
                               FocusScope.of(context).unfocus();
                             },
-                            child: Text("Clear All"),
+                            child: Text("Limpiar todo"),
                           ),
                         ],
                       ),
@@ -225,7 +225,7 @@ class _UpdateProfileState extends State<UpdateProfile> {
 
   String nameValidate(String name) {
     if (name.isEmpty) {
-      return "Name must not be empty";
+      return "El nombre no debe estar vacío";
     } else {
       return null;
     }
@@ -233,7 +233,7 @@ class _UpdateProfileState extends State<UpdateProfile> {
 
   String degreeValidate(String degree) {
     if (degree.isEmpty) {
-      return "Degree must not be empty";
+      return "El grado no debe estar vacío";
     } else {
       return null;
     }
@@ -241,7 +241,7 @@ class _UpdateProfileState extends State<UpdateProfile> {
 
   String designationValidate(String designation) {
     if (designation.isEmpty) {
-      return "Designation must not be empty";
+      return "La especialidad no debe estar vacía";
     } else {
       return null;
     }
@@ -249,9 +249,9 @@ class _UpdateProfileState extends State<UpdateProfile> {
 
   String phoneValidate(String phone) {
     if (phone.isEmpty) {
-      return "Phone must not be empty";
-    } else if (phone.length > 10) {
-      return "Phone number must not exeed 10 digits";
+      return "El teléfono no debe estar vacío";
+    } else if (phone.length > 9) {
+      return "El número de teléfono no debe exceder los 9 dígitos";
     } else {
       return null;
     }

@@ -74,7 +74,7 @@ class _UserProfileState extends State<UserProfile> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            'USER PROFILE',
+            'PERFIL DE USUARIO',
             style: TextStyle(
               color: Colors.black,
             ),
@@ -127,7 +127,7 @@ class _UserProfileState extends State<UserProfile> {
                                   border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(20),
                                   ),
-                                  label: Text('Name*'),
+                                  label: Text('Nombre*'),
                                   alignLabelWithHint: true,
                                 ),
                                 textInputAction: TextInputAction.next,
@@ -146,7 +146,7 @@ class _UserProfileState extends State<UserProfile> {
                                   border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(20),
                                   ),
-                                  label: Text('Gender*'),
+                                  label: Text('Genero*'),
                                   alignLabelWithHint: true,
                                 ),
                                 textInputAction: TextInputAction.next,
@@ -167,7 +167,7 @@ class _UserProfileState extends State<UserProfile> {
                                   border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(20),
                                   ),
-                                  label: Text('Email*'),
+                                  label: Text('Correo*'),
                                   alignLabelWithHint: true,
                                 ),
                                 textInputAction: TextInputAction.next,
@@ -188,7 +188,7 @@ class _UserProfileState extends State<UserProfile> {
                                   border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(20),
                                   ),
-                                  label: Text('Phone Number*'),
+                                  label: Text('Teléfono*'),
                                   alignLabelWithHint: true,
                                 ),
                                 textInputAction: TextInputAction.next,
@@ -226,7 +226,7 @@ class _UserProfileState extends State<UserProfile> {
                           FocusScope.of(context).unfocus();
                         },
                         child: Text(
-                          'Update',
+                          'Actualizar',
                         ),
                       ),
                     ],
@@ -242,7 +242,7 @@ class _UserProfileState extends State<UserProfile> {
 
   String _nameValidator(String name) {
     if (name.isEmpty) {
-      return "Field must not be empty";
+      return "El campo no debe estar vacío";
     } else {
       return null;
     }
@@ -250,7 +250,7 @@ class _UserProfileState extends State<UserProfile> {
 
   String _mailValidator(String mail) {
     if (mail.isEmpty) {
-      return 'Field must not be empty';
+      return 'El campo no debe estar vacío';
     } else {
       return null;
     }
@@ -258,7 +258,7 @@ class _UserProfileState extends State<UserProfile> {
 
   String _phoneValidator(String phone) {
     if (phone.isEmpty) {
-      return 'Field must not be empty';
+      return 'El campo no debe estar vacío';
     } else {
       return null;
     }
@@ -266,7 +266,7 @@ class _UserProfileState extends State<UserProfile> {
 
   String _genderValidator(String gender) {
     if (gender.isEmpty) {
-      return 'Field must not be empty';
+      return 'El campo no debe estar vacío';
     } else {
       return null;
     }

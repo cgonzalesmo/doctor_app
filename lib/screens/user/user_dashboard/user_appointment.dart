@@ -46,7 +46,7 @@ class _UserAppointmentState extends State<UserAppointment> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            'Your Appointments',
+            'Tus Citas',
             style: TextStyle(color: Colors.black),
           ),
           centerTitle: true,
@@ -164,7 +164,7 @@ class _UserAppointmentState extends State<UserAppointment> {
                         },
                       )
                     : Center(
-                        child: Text("No Appointments Found"),
+                        child: Text("No se encontraron citas"),
                       ),
               ),
       ),

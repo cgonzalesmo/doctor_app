@@ -99,7 +99,7 @@ class _AboutDoctorState extends State<AboutDoctor>
   }
 
   _makePhoneCall() async {
-    final url = 'tel:+91' + phone.toString();
+    final url = 'tel:+51' + phone.toString();
     print(url);
     if (await canLaunch(url)) {
       await launch(url);
@@ -204,7 +204,7 @@ class _AboutDoctorState extends State<AboutDoctor>
                     padding: EdgeInsets.only(left: 20),
                     width: MediaQuery.of(context).size.width,
                     child: Text(
-                      'About Doctor :',
+                      'Sobre el doctor:',
                       style: TextStyle(fontSize: 18),
                     ),
                   ),
@@ -231,7 +231,7 @@ class _AboutDoctorState extends State<AboutDoctor>
                           padding: EdgeInsets.only(left: 20, right: 20),
                           child: Center(
                             child: Text(
-                              "No Description",
+                              "Sin descripción",
                               textAlign: TextAlign.justify,
                               style: TextStyle(
                                 fontSize: 15,
@@ -276,7 +276,7 @@ class _AboutDoctorState extends State<AboutDoctor>
                       ),
                       child: Center(
                         child: Text(
-                          "BOOK APPOINTMENT",
+                          "RESERVA CITA",
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 18,
