@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'package:doctor_app/config/palette.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:razorpay_flutter/razorpay_flutter.dart';
 
 class AppointmentBooking extends StatefulWidget {
   final String doctorId;
@@ -26,14 +25,6 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
   final int userPhone;
   _AppointmentBookingState(this.doctorId, this.userID, this.userName,
       this.doctorName, this.userPhone);
-
-  Razorpay _razorpay;
-
-  // Telephony telephony = Telephony.instance;
-
-  // SmsSendStatusListener listener = (SendStatus status) {
-  //   print(status);
-  // };
 
   bool _mondaySelected;
   bool _tuesdaySelected;
@@ -106,11 +97,12 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
 
     print("+51" + "$userPhone");
 
+    /*
     _razorpay = new Razorpay();
 
     _razorpay.on(Razorpay.EVENT_PAYMENT_SUCCESS, successHandler);
     _razorpay.on(Razorpay.EVENT_PAYMENT_ERROR, failureHandler);
-    _razorpay.on(Razorpay.EVENT_EXTERNAL_WALLET, externalWalletHandler);
+    _razorpay.on(Razorpay.EVENT_EXTERNAL_WALLET, externalWalletHandler);*/
 
     _mondaySelected = false;
     _tuesdaySelected = false;
@@ -136,37 +128,6 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
   @override
   void dispose() {
     super.dispose();
-    _razorpay.clear();
-  }
-
-  void paymentAndBook() async {
-    var options = {
-      'key': "rzp_test_2yybXjsj1yUQX9",
-      'amount': 100 * 100,
-      'name': userName,
-      'description': "For Booking",
-      'timeout': 240,
-      'prefill': {
-        'contact': user['phone_no'],
-        'email': user['mail_id'],
-      },
-      'external': ['paytm'],
-    };
-    try {
-      _razorpay.open(options);
-    } catch (e) {
-      print(e);
-    }
-  }
-
-  void successHandler(PaymentSuccessResponse response) {
-    print('Success ' + response.toString());
-    appointment();
-  }
-
-  void failureHandler(PaymentFailureResponse response) {
-    print('Failure ' + response.toString());
-    appointmentNotBooked();
   }
 
   void externalWalletHandler() {
@@ -222,7 +183,6 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
   getTuesday() async {
     final String url =
         'https://doctor-api.up.railway.app/api/tuesday/$doctorId/';
-    // final String url = 'http://142.93.212.221/api/tuesday/$doctorId/';
     var response = await http.get(Uri.parse(url), headers: {
       'Content-Type': 'application/json;charset=UTF-8',
       'Charset': 'utf-8',
@@ -241,7 +201,6 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
   getWednesday() async {
     final String url =
         'https://doctor-api.up.railway.app/api/wednesday/$doctorId/';
-    // final String url = 'http://142.93.212.221/api/wednesday/$doctorId/';
     var response = await http.get(Uri.parse(url), headers: {
       'Content-Type': 'application/json;charset=UTF-8',
       'Charset': 'utf-8',
@@ -492,14 +451,6 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
           ],
         ),
       );
-      sendEmail(user['user_name'], user['mail_id']);
-      // telephony.sendSms(
-      //     to: "+91" + "$userPhone",
-      //     message:
-      //         "You have successfully booked the appointment at $time on $day at $place under doctor $doctorName",
-      //     statusListener: listener);
-      // sendSms();
-      // sendWhatsapp();
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text('Algo salió mal. ¡Intentar otra vez!')));
@@ -522,61 +473,6 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
         ],
       ),
     );
-  }
-
-  confirmToPay() {
-    showDialog(
-      context: context,
-      builder: (_) => AlertDialog(
-        title: Text('Proceder'),
-        content: Text('¿Proceder a pagar los gastos de reserva?'),
-        actions: [
-          ElevatedButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            child: Text('Cancelar'),
-            style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all(Colors.red),
-            ),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              paymentAndBook();
-              Navigator.pop(context);
-            },
-            child: Text('Proceder'),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Future sendEmail(
-    String name,
-    String email,
-  ) async {
-    final url = Uri.parse('https://api.emailjs.com/api/v1.0/email/send');
-    final response = await http.post(
-      url,
-      headers: {
-        'Origin': 'http://localhost',
-        'Content-Type': 'application/json',
-      },
-      body: json.encode({
-        'service_id': 'service_famlcn7',
-        'template_id': 'template_n5ocb22',
-        'user_id': 'user_DuqMlTilMuD07NWoZkZMX',
-        'template_params': {
-          'user_name': name,
-          'user_email': email,
-          'user_subject': 'Appointment Booked',
-          'user_message':
-              'You have successfully booked the appointment at $time on $day at $place under Dr. $doctorName($doctorDesignation).',
-        }
-      }),
-    );
-    print(response.body);
   }
 
   @override
@@ -1528,8 +1424,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
                                       _sundaySelected
                                   ? () {
                                       print('clicked on book');
-                                      // appointment();
-                                      confirmToPay();
+                                      appointment();
                                     }
                                   : null,
                               child: Text('Reservar'),
