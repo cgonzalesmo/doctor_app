@@ -353,6 +353,11 @@ class _DoctorRegistrationScreenState extends State<DoctorRegistrationScreen> {
     }
   }
 
+  static const Map<String, String> genderOptions = {
+    "Masculino": "Male",
+    "Femenino": "Female",
+  };
+
   @override
   void initState() {
     super.initState();
@@ -454,15 +459,17 @@ class _DoctorRegistrationScreenState extends State<DoctorRegistrationScreen> {
                               : null,
                           isExpanded: true,
                           value: _chosenValue,
-                          items: [
-                            'Male',
-                            'Female',
-                          ].map<DropdownMenuItem<String>>((String value) {
-                            return DropdownMenuItem<String>(
-                              value: value,
-                              child: Text(value),
-                            );
-                          }).toList(),
+                          items: genderOptions
+                              .map((description, value) {
+                                return MapEntry(
+                                    description,
+                                    DropdownMenuItem<String>(
+                                      value: value,
+                                      child: Text(description),
+                                    ));
+                              })
+                              .values
+                              .toList(),
                           onChanged: (String value) {
                             setState(() {
                               _chosenValue = value;

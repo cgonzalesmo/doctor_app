@@ -162,6 +162,11 @@ class _UserRegistrationScreenState extends State<UserRegistrationScreen> {
     _visibleConfirmPassword = false;
   }
 
+  static const Map<String, String> genderOptions = {
+    "Masculino": "Male",
+    "Femenino": "Female",
+  };
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -186,7 +191,7 @@ class _UserRegistrationScreenState extends State<UserRegistrationScreen> {
                   padding: EdgeInsets.only(left: 20),
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    "Formulario para Usuario",
+                    "Formulario para Paciente",
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
@@ -236,15 +241,17 @@ class _UserRegistrationScreenState extends State<UserRegistrationScreen> {
                               : null,
                           isExpanded: true,
                           value: _chosenValue,
-                          items: [
-                            'Male',
-                            'Female',
-                          ].map<DropdownMenuItem<String>>((String value) {
-                            return DropdownMenuItem<String>(
-                              value: value,
-                              child: Text(value),
-                            );
-                          }).toList(),
+                          items: genderOptions
+                              .map((description, value) {
+                                return MapEntry(
+                                    description,
+                                    DropdownMenuItem<String>(
+                                      value: value,
+                                      child: Text(description),
+                                    ));
+                              })
+                              .values
+                              .toList(),
                           onChanged: (String value) {
                             setState(() {
                               _chosenValue = value;
