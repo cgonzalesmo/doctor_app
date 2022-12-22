@@ -1,11 +1,11 @@
-import 'package:ezhealth_app/config/palette.dart';
-import 'package:ezhealth_app/screens/doctor_screen/clinic_days_screen/friday.dart';
-import 'package:ezhealth_app/screens/doctor_screen/clinic_days_screen/monday.dart';
-import 'package:ezhealth_app/screens/doctor_screen/clinic_days_screen/saturday.dart';
-import 'package:ezhealth_app/screens/doctor_screen/clinic_days_screen/sunday.dart';
-import 'package:ezhealth_app/screens/doctor_screen/clinic_days_screen/thursday.dart';
-import 'package:ezhealth_app/screens/doctor_screen/clinic_days_screen/tuesday.dart';
-import 'package:ezhealth_app/screens/doctor_screen/clinic_days_screen/wednesday.dart';
+import 'package:doctor_app/config/palette.dart';
+import 'package:doctor_app/screens/doctor_screen/clinic_days_screen/friday.dart';
+import 'package:doctor_app/screens/doctor_screen/clinic_days_screen/monday.dart';
+import 'package:doctor_app/screens/doctor_screen/clinic_days_screen/saturday.dart';
+import 'package:doctor_app/screens/doctor_screen/clinic_days_screen/sunday.dart';
+import 'package:doctor_app/screens/doctor_screen/clinic_days_screen/thursday.dart';
+import 'package:doctor_app/screens/doctor_screen/clinic_days_screen/tuesday.dart';
+import 'package:doctor_app/screens/doctor_screen/clinic_days_screen/wednesday.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 

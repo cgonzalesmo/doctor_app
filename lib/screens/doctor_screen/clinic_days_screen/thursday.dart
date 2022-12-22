@@ -1,4 +1,4 @@
-import 'package:ezhealth_app/config/palette.dart';
+import 'package:doctor_app/config/palette.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -40,7 +40,7 @@ class _ThursdayScreenState extends State<ThursdayScreen> {
 
   void sendData() async {
     final String url =
-        'https://web-production-4d85.up.railway.app/api/thursday/$doctorId/';
+        'https://doctor-api.up.railway.app/api/thursday/$doctorId/';
     var response = await http.put(Uri.parse(url), body: {
       "thursday_id": doctorId,
       "chamber_location": clinicText,

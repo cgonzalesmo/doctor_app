@@ -46,7 +46,7 @@ class _UpdateProfileState extends State<UpdateProfile> {
 
   void updateData() async {
     final String url =
-        'https://web-production-4d85.up.railway.app/api/doctor/$doctorId/';
+        'https://doctor-api.up.railway.app/api/doctor/$doctorId/';
 
     try {
       var response = await http.put(Uri.parse(url), body: {

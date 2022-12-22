@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "603518155439",
+    "project_id": "doctor-app-c368f",
+    "storage_bucket": "doctor-app-c368f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603518155439:android:213ee39e656f1392e9b25a",
+        "android_client_info": {
+          "package_name": "com.example.ezhealth_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "603518155439-p87a7g35i02rrlur9micug5loevfm0tu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0xpSd13gTXwhkD6YvJKig16sjZeJjGTI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "603518155439-p87a7g35i02rrlur9micug5loevfm0tu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "603518155439-6sie4808udbtq8c84n2ki1mh1k471tnk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.ezhealthApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,12 +1,12 @@
 import 'dart:async';
 
 import 'package:connectivity/connectivity.dart';
-import 'package:ezhealth_app/config/palette.dart';
-import 'package:ezhealth_app/screens/doctor_screen/doctor_screen.dart';
-import 'package:ezhealth_app/screens/extra_screens/get_started.dart';
-import 'package:ezhealth_app/screens/extra_screens/offline.dart';
-import 'package:ezhealth_app/screens/onboarding/onboard.dart';
-import 'package:ezhealth_app/screens/user/user_dashboard/user_home.dart';
+import 'package:doctor_app/config/palette.dart';
+import 'package:doctor_app/screens/doctor_screen/doctor_screen.dart';
+import 'package:doctor_app/screens/extra_screens/get_started.dart';
+import 'package:doctor_app/screens/extra_screens/offline.dart';
+import 'package:doctor_app/screens/onboarding/onboard.dart';
+import 'package:doctor_app/screens/user/user_dashboard/user_home.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:shared_preferences/shared_preferences.dart';

@@ -92,7 +92,7 @@
 55-->[androidx.core:core:1.7.0] C:\Users\alpha\.gradle\caches\transforms-3\5e083c06c9925c2309f02468fc66e376\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 56        android:debuggable="true"
 57        android:icon="@mipmap/ic_launcher"
-58        android:label="ezhealth_app" >
+58        android:label="Doctor App" >
 59        <activity
 60            android:name="com.example.ezhealth_app.MainActivity"
 61            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"

@@ -1,7 +1,7 @@
-import 'package:ezhealth_app/config/palette.dart';
-import 'package:ezhealth_app/screens/bmi_screen/components/bottom_button.dart';
-import 'package:ezhealth_app/screens/bmi_screen/components/reusable_card.dart';
-import 'package:ezhealth_app/screens/bmi_screen/constants.dart';
+import 'package:doctor_app/config/palette.dart';
+import 'package:doctor_app/screens/bmi_screen/components/bottom_button.dart';
+import 'package:doctor_app/screens/bmi_screen/components/reusable_card.dart';
+import 'package:doctor_app/screens/bmi_screen/constants.dart';
 import 'package:flutter/material.dart';
 
 class ResultsPage extends StatelessWidget {

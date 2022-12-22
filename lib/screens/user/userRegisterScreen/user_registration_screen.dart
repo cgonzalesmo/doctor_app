@@ -1,4 +1,4 @@
-import 'package:ezhealth_app/screens/loginScreen/login_screen.dart';
+import 'package:doctor_app/screens/loginScreen/login_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
@@ -131,8 +131,8 @@ class _UserRegistrationScreenState extends State<UserRegistrationScreen> {
   }
 
   sendUser(String userID) async {
-    // final String url = 'https://web-production-4d85.up.railway.app/api/user/';
-    final String url = 'https://web-production-4d85.up.railway.app/api/user/';
+    // final String url = 'https://doctor-api.up.railway.app/api/user/';
+    final String url = 'https://doctor-api.up.railway.app/api/user/';
     try {
       var response = await http.post(Uri.parse(url), body: {
         "registration_id": userID,

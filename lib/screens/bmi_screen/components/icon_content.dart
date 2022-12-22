@@ -1,4 +1,4 @@
-import 'package:ezhealth_app/screens/bmi_screen/constants.dart';
+import 'package:doctor_app/screens/bmi_screen/constants.dart';
 import 'package:flutter/material.dart';
 
 class IconContent extends StatelessWidget {

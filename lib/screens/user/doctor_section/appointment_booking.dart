@@ -1,6 +1,6 @@
 import 'dart:convert';
-import 'package:ezhealth_app/config/palette.dart';
-// import 'package:ezhealth_app/testScreens/user/doctor_section/time_slot.dart';
+import 'package:doctor_app/config/palette.dart';
+// import 'package:doctor_app/testScreens/user/doctor_section/time_slot.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 // import 'package:page_transition/page_transition.dart';
@@ -177,7 +177,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
 
   getDoctorData() async {
     final String url =
-        'https://web-production-4d85.up.railway.app/api/doctor/$doctorId/';
+        'https://doctor-api.up.railway.app/api/doctor/$doctorId/';
     var response = await http.get(Uri.parse(url));
     if (!mounted) return;
     setState(() {
@@ -189,8 +189,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
   }
 
   getUserDetails() async {
-    final String url =
-        'https://web-production-4d85.up.railway.app/api/user/$userID/';
+    final String url = 'https://doctor-api.up.railway.app/api/user/$userID/';
     var response = await http.get(Uri.parse(url), headers: {
       'Content-Type': 'application/json;charset=UTF-8',
       'Charset': 'utf-8',
@@ -205,7 +204,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
 
   getMonday() async {
     final String url =
-        'https://web-production-4d85.up.railway.app/api/monday/$doctorId/';
+        'https://doctor-api.up.railway.app/api/monday/$doctorId/';
     // final String url = 'http://142.93.212.221/api/monday/$doctorId/';
     var response = await http.get(Uri.parse(url), headers: {
       'Content-Type': 'application/json;charset=UTF-8',
@@ -225,7 +224,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
 
   getTuesday() async {
     final String url =
-        'https://web-production-4d85.up.railway.app/api/tuesday/$doctorId/';
+        'https://doctor-api.up.railway.app/api/tuesday/$doctorId/';
     // final String url = 'http://142.93.212.221/api/tuesday/$doctorId/';
     var response = await http.get(Uri.parse(url), headers: {
       'Content-Type': 'application/json;charset=UTF-8',
@@ -244,7 +243,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
 
   getWednesday() async {
     final String url =
-        'https://web-production-4d85.up.railway.app/api/wednesday/$doctorId/';
+        'https://doctor-api.up.railway.app/api/wednesday/$doctorId/';
     // final String url = 'http://142.93.212.221/api/wednesday/$doctorId/';
     var response = await http.get(Uri.parse(url), headers: {
       'Content-Type': 'application/json;charset=UTF-8',
@@ -263,7 +262,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
 
   getThursday() async {
     final String url =
-        'https://web-production-4d85.up.railway.app/api/thursday/$doctorId/';
+        'https://doctor-api.up.railway.app/api/thursday/$doctorId/';
     // final String url = 'http://142.93.212.221/api/thursday/$doctorId/';
     var response = await http.get(Uri.parse(url), headers: {
       'Content-Type': 'application/json;charset=UTF-8',
@@ -282,7 +281,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
 
   getFriday() async {
     final String url =
-        'https://web-production-4d85.up.railway.app/api/friday/$doctorId/';
+        'https://doctor-api.up.railway.app/api/friday/$doctorId/';
     // final String url = 'http://142.93.212.221/api/friday/$doctorId/';
     var response = await http.get(Uri.parse(url), headers: {
       'Content-Type': 'application/json;charset=UTF-8',
@@ -301,7 +300,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
 
   getSaturday() async {
     final String url =
-        'https://web-production-4d85.up.railway.app/api/saturday/$doctorId/';
+        'https://doctor-api.up.railway.app/api/saturday/$doctorId/';
     // final String url = 'http://142.93.212.221/api/saturday/$doctorId';
     var response = await http.get(Uri.parse(url), headers: {
       'Content-Type': 'application/json;charset=UTF-8',
@@ -320,7 +319,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
 
   getSunday() async {
     final String url =
-        'https://web-production-4d85.up.railway.app/api/sunday/$doctorId/';
+        'https://doctor-api.up.railway.app/api/sunday/$doctorId/';
     // final String url = 'http://142.93.212.221/api/sunday/$doctorId/';
     var response = await http.get(Uri.parse(url), headers: {
       'Content-Type': 'application/json;charset=UTF-8',
@@ -339,7 +338,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
 
   decreaseMondaySlot(int mondaySlotValue) async {
     final String url =
-        'https://web-production-4d85.up.railway.app/api/monday/$doctorId/';
+        'https://doctor-api.up.railway.app/api/monday/$doctorId/';
     var response = await http.put(
       Uri.parse(url),
       body: {
@@ -355,7 +354,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
 
   decreaseTuesdaySlot(int tuesdaySlotValue) async {
     final String url =
-        'https://web-production-4d85.up.railway.app/api/tuesday/$doctorId/';
+        'https://doctor-api.up.railway.app/api/tuesday/$doctorId/';
     var response = await http.put(
       Uri.parse(url),
       body: {
@@ -371,7 +370,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
 
   decreaseWednesdaySlot(int wednesdaySlotValue) async {
     final String url =
-        'https://web-production-4d85.up.railway.app/api/wednesday/$doctorId/';
+        'https://doctor-api.up.railway.app/api/wednesday/$doctorId/';
     var response = await http.put(
       Uri.parse(url),
       body: {
@@ -387,7 +386,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
 
   decreaseThursdaySlot(int thursdaySlotValue) async {
     final String url =
-        'https://web-production-4d85.up.railway.app/api/thursday/$doctorId/';
+        'https://doctor-api.up.railway.app/api/thursday/$doctorId/';
     var response = await http.put(
       Uri.parse(url),
       body: {
@@ -403,7 +402,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
 
   decreaseFridaySlot(int fridaySlotValue) async {
     final String url =
-        'https://web-production-4d85.up.railway.app/api/friday/$doctorId/';
+        'https://doctor-api.up.railway.app/api/friday/$doctorId/';
     var response = await http.put(
       Uri.parse(url),
       body: {
@@ -419,7 +418,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
 
   decreaseSaturdaySlot(int saturdaySlotValue) async {
     final String url =
-        'https://web-production-4d85.up.railway.app/api/saturday/$doctorId/';
+        'https://doctor-api.up.railway.app/api/saturday/$doctorId/';
     var response = await http.put(
       Uri.parse(url),
       body: {
@@ -435,7 +434,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
 
   decreaseSundaySlot(int sundaySlotValue) async {
     final String url =
-        'https://web-production-4d85.up.railway.app/api/sunday/$doctorId/';
+        'https://doctor-api.up.railway.app/api/sunday/$doctorId/';
     var response = await http.put(
       Uri.parse(url),
       body: {
@@ -450,8 +449,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
   }
 
   appointment() async {
-    final String url =
-        'https://web-production-4d85.up.railway.app/api/appointment/';
+    final String url = 'https://doctor-api.up.railway.app/api/appointment/';
     var response = await http.post(Uri.parse(url), body: {
       "username": userName,
       "doctorname": doctorName,

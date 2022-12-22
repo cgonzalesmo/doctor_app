@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:ezhealth_app/config/palette.dart';
+import 'package:doctor_app/config/palette.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -46,7 +46,7 @@ class _TuesdayScreenState extends State<TuesdayScreen> {
 
   void sendData() async {
     final String url =
-        'https://web-production-4d85.up.railway.app/api/tuesday/$doctorId/';
+        'https://doctor-api.up.railway.app/api/tuesday/$doctorId/';
     var response = await http.put(Uri.parse(url), body: {
       "tuesday_id": doctorId,
       "chamber_location": clinicText,
@@ -73,7 +73,7 @@ class _TuesdayScreenState extends State<TuesdayScreen> {
 
   getData() async {
     final String url =
-        'https://web-production-4d85.up.railway.app/api/tuesday/$doctorId/';
+        'https://doctor-api.up.railway.app/api/tuesday/$doctorId/';
     var response = await http.get(Uri.parse(url));
     if (!mounted) return;
     setState(() {

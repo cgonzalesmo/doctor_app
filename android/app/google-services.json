@@ -29,6 +29,13 @@
             {
               "client_id": "603518155439-p87a7g35i02rrlur9micug5loevfm0tu.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "603518155439-6sie4808udbtq8c84n2ki1mh1k471tnk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.ezhealthApp"
+              }
             }
           ]
         }

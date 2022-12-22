@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:auto_size_text_pk/auto_size_text_pk.dart';
-import 'package:ezhealth_app/config/palette.dart';
+import 'package:doctor_app/config/palette.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -28,7 +28,7 @@ class _UserAppointmentState extends State<UserAppointment> {
 
   getUserAppointment() async {
     final String url =
-        'https://web-production-4d85.up.railway.app/api/appointmentuser/$userId/';
+        'https://doctor-api.up.railway.app/api/appointmentuser/$userId/';
     var response = await http.get(Uri.parse(url));
     if (!mounted) return;
     setState(() {

@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:ezhealth_app/screens/user/doctor_section/appointment_booking.dart';
+import 'package:doctor_app/screens/user/doctor_section/appointment_booking.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -85,7 +85,7 @@ class _AboutDoctorState extends State<AboutDoctor>
 
   getDoctorId() async {
     final String url =
-        'https://web-production-4d85.up.railway.app/api/doctor/$doctorID/';
+        'https://doctor-api.up.railway.app/api/doctor/$doctorID/';
     var response = await http.get(Uri.parse(url), headers: {
       'Content-Type': 'application/json;charset=UTF-8',
       'Charset': 'utf-8',

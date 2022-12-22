@@ -1,4 +1,4 @@
-import 'package:ezhealth_app/screens/loginScreen/login_screen.dart';
+import 'package:doctor_app/screens/loginScreen/login_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
@@ -152,8 +152,8 @@ class _DoctorRegistrationScreenState extends State<DoctorRegistrationScreen> {
   }
 
   sendDoctor(String userID) async {
-    // final String url = 'https://web-production-4d85.up.railway.app/api/doctor/';
-    final String url = 'https://web-production-4d85.up.railway.app/api/doctor/';
+    // final String url = 'https://doctor-api.up.railway.app/api/doctor/';
+    final String url = 'https://doctor-api.up.railway.app/api/doctor/';
     try {
       var response = await http.post(Uri.parse(url), body: {
         "registration_id": userID,
@@ -174,8 +174,8 @@ class _DoctorRegistrationScreenState extends State<DoctorRegistrationScreen> {
   }
 
   sendMondayData(String userID) async {
-    // final String url = 'https://web-production-4d85.up.railway.app/api/monday/';
-    final String url = 'https://web-production-4d85.up.railway.app/api/monday/';
+    // final String url = 'https://doctor-api.up.railway.app/api/monday/';
+    final String url = 'https://doctor-api.up.railway.app/api/monday/';
     try {
       var response = await http.post(Uri.parse(url), body: {
         "monday_id": userID,
@@ -196,9 +196,8 @@ class _DoctorRegistrationScreenState extends State<DoctorRegistrationScreen> {
   }
 
   sendTuesdayData(String userID) async {
-    // final String url = 'https://web-production-4d85.up.railway.app/api/tuesday/';
-    final String url =
-        'https://web-production-4d85.up.railway.app/api/tuesday/';
+    // final String url = 'https://doctor-api.up.railway.app/api/tuesday/';
+    final String url = 'https://doctor-api.up.railway.app/api/tuesday/';
     try {
       var response = await http.post(Uri.parse(url), body: {
         "tuesday_id": userID,
@@ -219,9 +218,8 @@ class _DoctorRegistrationScreenState extends State<DoctorRegistrationScreen> {
   }
 
   sendWednesdayData(String userID) async {
-    // final String url = 'https://web-production-4d85.up.railway.app/api/wednesday/';
-    final String url =
-        'https://web-production-4d85.up.railway.app/api/wednesday/';
+    // final String url = 'https://doctor-api.up.railway.app/api/wednesday/';
+    final String url = 'https://doctor-api.up.railway.app/api/wednesday/';
     try {
       var response = await http.post(Uri.parse(url), body: {
         "wednesday_id": userID,
@@ -242,9 +240,8 @@ class _DoctorRegistrationScreenState extends State<DoctorRegistrationScreen> {
   }
 
   sendThursdayData(String userID) async {
-    // final String url = 'https://web-production-4d85.up.railway.app/api/thursday/';
-    final String url =
-        'https://web-production-4d85.up.railway.app/api/thursday/';
+    // final String url = 'https://doctor-api.up.railway.app/api/thursday/';
+    final String url = 'https://doctor-api.up.railway.app/api/thursday/';
     try {
       var response = await http.post(Uri.parse(url), body: {
         "thursday_id": userID,
@@ -265,8 +262,8 @@ class _DoctorRegistrationScreenState extends State<DoctorRegistrationScreen> {
   }
 
   sendFridayData(String userID) async {
-    // final String url = 'https://web-production-4d85.up.railway.app/api/friday/';
-    final String url = 'https://web-production-4d85.up.railway.app/api/friday/';
+    // final String url = 'https://doctor-api.up.railway.app/api/friday/';
+    final String url = 'https://doctor-api.up.railway.app/api/friday/';
     try {
       var response = await http.post(Uri.parse(url), body: {
         "friday_id": userID,
@@ -287,9 +284,8 @@ class _DoctorRegistrationScreenState extends State<DoctorRegistrationScreen> {
   }
 
   sendSaturdayData(String userID) async {
-    // final String url = 'https://web-production-4d85.up.railway.app/api/saturday/';
-    final String url =
-        'https://web-production-4d85.up.railway.app/api/saturday/';
+    // final String url = 'https://doctor-api.up.railway.app/api/saturday/';
+    final String url = 'https://doctor-api.up.railway.app/api/saturday/';
     try {
       var response = await http.post(Uri.parse(url), body: {
         "saturday_id": userID,
@@ -310,8 +306,8 @@ class _DoctorRegistrationScreenState extends State<DoctorRegistrationScreen> {
   }
 
   sendSundayData(String userID) async {
-    // final String url = 'https://web-production-4d85.up.railway.app/api/sunday/';
-    final String url = 'https://web-production-4d85.up.railway.app/api/sunday/';
+    // final String url = 'https://doctor-api.up.railway.app/api/sunday/';
+    final String url = 'https://doctor-api.up.railway.app/api/sunday/';
     try {
       var response = await http.post(Uri.parse(url), body: {
         "sunday_id": userID,
@@ -332,9 +328,8 @@ class _DoctorRegistrationScreenState extends State<DoctorRegistrationScreen> {
   }
 
   sendChamberData(userID) async {
-    // final String url = 'https://web-production-4d85.up.railway.app/api/chamber/';
-    final String url =
-        'https://web-production-4d85.up.railway.app/api/chamber/';
+    // final String url = 'https://doctor-api.up.railway.app/api/chamber/';
+    final String url = 'https://doctor-api.up.railway.app/api/chamber/';
     try {
       var response = await http.post(Uri.parse(url), body: {
         "chamber_id": userID,

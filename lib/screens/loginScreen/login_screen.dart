@@ -1,5 +1,5 @@
-import 'package:ezhealth_app/screens/doctor_screen/doctor_screen.dart';
-import 'package:ezhealth_app/screens/user/user_dashboard/user_home.dart';
+import 'package:doctor_app/screens/doctor_screen/doctor_screen.dart';
+import 'package:doctor_app/screens/user/user_dashboard/user_home.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';

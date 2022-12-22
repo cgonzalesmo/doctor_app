@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:auto_size_text_pk/auto_size_text_pk.dart';
-import 'package:ezhealth_app/config/palette.dart';
-import 'package:ezhealth_app/screens/extra_screens/read_news.dart';
+import 'package:doctor_app/config/palette.dart';
+import 'package:doctor_app/screens/extra_screens/read_news.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:lottie/lottie.dart';

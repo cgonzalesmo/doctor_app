@@ -782,13 +782,13 @@
       "languageVersion": "2.16"
     },
     {
-      "name": "ezhealth_app",
+      "name": "doctor_app",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2022-11-15T05:07:22.318304Z",
+  "generated": "2022-12-22T16:17:03.422763Z",
   "generator": "pub",
-  "generatorVersion": "2.18.4"
+  "generatorVersion": "2.18.5"
 }

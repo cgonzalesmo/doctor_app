@@ -1,15 +1,15 @@
 import 'dart:convert';
 import 'package:auto_size_text_pk/auto_size_text_pk.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:ezhealth_app/config/palette.dart';
-import 'package:ezhealth_app/screens/bmi_screen/screens/input_page.dart';
-import 'package:ezhealth_app/screens/doctor_screen/chamber_screen.dart';
-import 'package:ezhealth_app/screens/doctor_screen/doctor_profile.dart';
-import 'package:ezhealth_app/screens/extra_screens/corona_stats.dart';
-import 'package:ezhealth_app/screens/extra_screens/news.dart';
-import 'package:ezhealth_app/screens/extra_screens/get_started.dart';
-import 'package:ezhealth_app/screens/extra_screens/privacy_policy.dart';
-import 'package:ezhealth_app/screens/extra_screens/terms_and_condition.dart';
+import 'package:doctor_app/config/palette.dart';
+import 'package:doctor_app/screens/bmi_screen/screens/input_page.dart';
+import 'package:doctor_app/screens/doctor_screen/chamber_screen.dart';
+import 'package:doctor_app/screens/doctor_screen/doctor_profile.dart';
+import 'package:doctor_app/screens/extra_screens/corona_stats.dart';
+import 'package:doctor_app/screens/extra_screens/news.dart';
+import 'package:doctor_app/screens/extra_screens/get_started.dart';
+import 'package:doctor_app/screens/extra_screens/privacy_policy.dart';
+import 'package:doctor_app/screens/extra_screens/terms_and_condition.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -59,7 +59,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
 
   getAppointmentDetails() async {
     final String url =
-        'https://web-production-4d85.up.railway.app/api/appointmentdoctor/$userId/';
+        'https://doctor-api.up.railway.app/api/appointmentdoctor/$userId/';
     var response = await http.get(Uri.parse(url));
     if (!mounted) return;
     setState(() {
@@ -72,9 +72,8 @@ class _DoctorScreenState extends State<DoctorScreen> {
   }
 
   void getDoctor() async {
-    // final String url = 'https://web-production-4d85.up.railway.app/api/doctor/$userId/';
-    final String url =
-        'https://web-production-4d85.up.railway.app/api/doctor/$userId/';
+    // final String url = 'https://doctor-api.up.railway.app/api/doctor/$userId/';
+    final String url = 'https://doctor-api.up.railway.app/api/doctor/$userId/';
     var response = await http.get(Uri.parse(url));
     if (!mounted) return;
     setState(() {

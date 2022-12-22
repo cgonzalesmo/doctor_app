@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:ezhealth_app/config/palette.dart';
+import 'package:doctor_app/config/palette.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -44,9 +44,9 @@ class _MondayScreenState extends State<MondayScreen> {
   }
 
   sendData() async {
-    // final String url = 'https://web-production-4d85.up.railway.app/api/monday/$doctorId/';
+    // final String url = 'https://doctor-api.up.railway.app/api/monday/$doctorId/';
     final String url =
-        'https://web-production-4d85.up.railway.app/api/monday/$doctorId/';
+        'https://doctor-api.up.railway.app/api/monday/$doctorId/';
     var response = await http.put(Uri.parse(url), body: {
       "monday_id": doctorId,
       "chamber_location": clinicText,
@@ -66,9 +66,9 @@ class _MondayScreenState extends State<MondayScreen> {
   }
 
   updateChamber() async {
-    // final String url = 'https://web-production-4d85.up.railway.app/api/chamber/$doctorId/';
+    // final String url = 'https://doctor-api.up.railway.app/api/chamber/$doctorId/';
     final String url =
-        'https://web-production-4d85.up.railway.app/api/chamber/$doctorId/';
+        'https://doctor-api.up.railway.app/api/chamber/$doctorId/';
     try {
       var response = await http.put(Uri.parse(url), body: {
         "chamber_id": doctorId,
@@ -99,9 +99,9 @@ class _MondayScreenState extends State<MondayScreen> {
   }
 
   getData() async {
-    // final String url = 'https://web-production-4d85.up.railway.app/api/monday/$doctorId/';
+    // final String url = 'https://doctor-api.up.railway.app/api/monday/$doctorId/';
     final String url =
-        'https://web-production-4d85.up.railway.app/api/monday/$doctorId/';
+        'https://doctor-api.up.railway.app/api/monday/$doctorId/';
     var response = await http.get(Uri.parse(url));
     if (!mounted) return;
     setState(() {
