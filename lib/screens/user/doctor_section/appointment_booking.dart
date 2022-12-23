@@ -411,13 +411,66 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
       "user": userID,
       "doctor": doctorId,
     });
+    String daySpanish(day) {
+      switch (day) {
+        case 'Monday':
+          {
+            return ("Lunes");
+          }
+          break;
+
+        case 'Tuesday':
+          {
+            return ("Martes");
+          }
+          break;
+
+        case 'Wednesday':
+          {
+            return ("Miercoles");
+          }
+          break;
+
+        case 'Thursday':
+          {
+            return ("Jueves");
+          }
+          break;
+
+        case 'Friday':
+          {
+            return ("Viernes");
+          }
+          break;
+
+        case 'Saturday':
+          {
+            return ("Sabado");
+          }
+          break;
+
+        case 'Sunday':
+          {
+            return ("Domingo");
+          }
+          break;
+
+        default:
+          {
+            return ("NO");
+          }
+          break;
+      }
+    }
+
+    var dia = daySpanish(day);
     if (response.statusCode == 201) {
       showDialog(
         context: (context),
         builder: (_) => AlertDialog(
           title: Text('Éxito'),
           content: Text(
-              'Ha reservado con éxito la cita a las $time el dia $day en $place con el Dr. $doctorName($doctorDesignation).'),
+              'Ha reservado con éxito la cita a las $time el dia $dia en $place con el Dr. $doctorName($doctorDesignation).'),
           actions: [
             ElevatedButton(
               onPressed: () {

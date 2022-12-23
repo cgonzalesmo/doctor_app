@@ -95,13 +95,7 @@ class _UserAppointmentState extends State<UserAppointment> {
                                           MainAxisAlignment.center,
                                       children: [
                                         Text(
-                                          userAppointment['day']
-                                                  .toString()
-                                                  .characters
-                                                  .take(3)
-                                                  .toString()
-                                                  .toUpperCase() +
-                                              " |",
+                                          daySpanish(userAppointment['day']),
                                           style: TextStyle(
                                             fontSize: 20,
                                           ),
@@ -169,5 +163,57 @@ class _UserAppointmentState extends State<UserAppointment> {
               ),
       ),
     );
+  }
+}
+
+String daySpanish(day) {
+  switch (day) {
+    case 'Monday':
+      {
+        return ("LUN");
+      }
+      break;
+
+    case 'Tuesday':
+      {
+        return ("MAR");
+      }
+      break;
+
+    case 'Wednesday':
+      {
+        return ("MIE");
+      }
+      break;
+
+    case 'Thursday':
+      {
+        return ("JUE");
+      }
+      break;
+
+    case 'Friday':
+      {
+        return ("VIE");
+      }
+      break;
+
+    case 'Saturday':
+      {
+        return ("SAB");
+      }
+      break;
+
+    case 'Sunday':
+      {
+        return ("DOM");
+      }
+      break;
+
+    default:
+      {
+        return ("NO");
+      }
+      break;
   }
 }
